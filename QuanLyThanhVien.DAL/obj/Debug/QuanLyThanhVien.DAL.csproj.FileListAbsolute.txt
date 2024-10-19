@@ -1,0 +1,12 @@
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.dll.config
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.dll
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.pdb
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.dll
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.xml
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.csproj.AssemblyReference.cache
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.csproj.CoreCompileInputs.cache
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyTh.EDF589BE.Up2Date
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.dll
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.pdb

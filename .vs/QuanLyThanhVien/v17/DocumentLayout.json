@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD61ED75-7290-4F2D-ADDB-C0002B739351}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD61ED75-7290-4F2D-ADDB-C0002B739351}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|solutionrelative:quanlythanhvien.gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE9C67D0-7737-4A40-85B9-653582BEF125}|QuanLyThanhVien.DAL\\QuanLyThanhVien.DAL.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.dal\\entities\\qltv.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{EE9C67D0-7737-4A40-85B9-653582BEF125}|QuanLyThanhVien.DAL\\QuanLyThanhVien.DAL.csproj|solutionrelative:quanlythanhvien.dal\\entities\\qltv.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F8AEC69-B84F-426D-B216-9ED787ECEC57}|QuanLyThanhVien.BUS\\QuanLyThanhVien.BUS.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.bus\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F8AEC69-B84F-426D-B216-9ED787ECEC57}|QuanLyThanhVien.BUS\\QuanLyThanhVien.BUS.csproj|solutionrelative:quanlythanhvien.bus\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QLTV.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.DAL\\Entities\\QLTV.edmx",
+              "RelativeDocumentMoniker": "QuanLyThanhVien.DAL\\Entities\\QLTV.edmx",
+              "ToolTip": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.DAL\\Entities\\QLTV.edmx [Diagram1]",
+              "RelativeToolTip": "QuanLyThanhVien.DAL\\Entities\\QLTV.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-10-19T12:31:30.526Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.BUS\\Class1.cs",
+              "RelativeDocumentMoniker": "QuanLyThanhVien.BUS\\Class1.cs",
+              "ToolTip": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.BUS\\Class1.cs",
+              "RelativeToolTip": "QuanLyThanhVien.BUS\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T12:28:33.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Form1.cs",
+              "RelativeDocumentMoniker": "QuanLyThanhVien.GUI\\Form1.cs",
+              "ToolTip": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Form1.cs [Design]",
+              "RelativeToolTip": "QuanLyThanhVien.GUI\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T12:27:17.584Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

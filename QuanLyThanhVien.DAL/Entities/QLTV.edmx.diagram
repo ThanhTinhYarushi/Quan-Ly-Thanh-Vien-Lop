@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="090349d19e2f4c8abe6156eed4abc5cf" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="QLTVModel.Diem" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.DiemDanh" Width="1.5" PointX="6" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.GiaoVien" Width="1.5" PointX="1.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.HoatDong" Width="1.5" PointX="3.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.Lop" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.LopSinhVien" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.PhanHoi" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.RolePermission" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.SinhVien" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.ThamGia" Width="1.5" PointX="6" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.ThanhToan" Width="1.5" PointX="3" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.ThongBao" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLTVModel.UserAccount" Width="1.5" PointX="10.125" PointY="15.125" IsExpanded="true" />
+        <AssociationConnector Association="QLTVModel.FK__Diem__ClassID__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__Diem__MSSV__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__DiemDanh__ClassI__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__DiemDanh__MSSV__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__HoatDong__MSGV__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__UserAccoun__MSGV__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__HoatDong__ClassI__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PhanHoi__HoatDon__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__ThamGia__HoatDon__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__LopSinhVi__Class__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__ThongBao__ClassI__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__LopSinhVie__MSSV__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__PhanHoi__MSSV__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__ThamGia__MSSV__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__ThanhToan__MSSV__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="QLTVModel.FK__UserAccoun__MSSV__6FE99F9F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -43,5 +43,10 @@ namespace QuanLyThanhVien.GUI.Students.GUI
             frmNV.WindowState = FormWindowState.Maximized;
             frmNV.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

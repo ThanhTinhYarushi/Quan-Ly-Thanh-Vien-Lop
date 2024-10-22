@@ -1,0 +1,15 @@
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\QuanLyThanhVien.BUS.dll.config
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\QuanLyThanhVien.BUS.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\QuanLyThanhVien.BUS.pdb
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\QuanLyThanhVien.DAL.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\QuanLyThanhVien.DAL.pdb
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\QuanLyThanhVien.DAL.dll.config
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\obj\Debug\QuanLyThanhVien.BUS.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\obj\Debug\QuanLyThanhVien.BUS.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\obj\Debug\QuanLyTh.2F1A4387.Up2Date
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\obj\Debug\QuanLyThanhVien.BUS.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.BUS\obj\Debug\QuanLyThanhVien.BUS.pdb

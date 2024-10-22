@@ -10,3 +10,15 @@ C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLy
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyTh.EDF589BE.Up2Date
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.dll
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.pdb
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.dll.config
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.pdb
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyTh.EDF589BE.Up2Date
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.dll
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.pdb

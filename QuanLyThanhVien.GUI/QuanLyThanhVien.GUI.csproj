@@ -46,11 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Admin.GUI\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin.GUI\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
+=======
+    <Compile Include="Students.GUI\frmHoatDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.GUI\frmHoatDong.Designer.cs">
+      <DependentUpon>frmHoatDong.cs</DependentUpon>
+>>>>>>> 6d384a6660c20112cf0d8a55a0c10665180a9920
     </Compile>
     <Compile Include="Students.GUI\frmSinhVien.cs">
       <SubType>Form</SubType>
@@ -63,6 +71,12 @@
     </Compile>
     <Compile Include="Students.GUI\frmThongTinCaNhanSinhVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students.GUI\ThongTinLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.GUI\ThongTinLopHoc.Designer.cs">
+      <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="System.GUI\frmLogIn.cs">
       <SubType>Form</SubType>
@@ -78,6 +92,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="Teacher.GUI\frmGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +117,19 @@
     <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
     </Compile>
+=======
+    <EmbeddedResource Include="Students.GUI\frmHoatDong.resx">
+      <DependentUpon>frmHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 6d384a6660c20112cf0d8a55a0c10665180a9920
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmThongTinCaNhanSinhVien.resx">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students.GUI\ThongTinLopHoc.resx">
+      <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System.GUI\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>

@@ -84,6 +84,24 @@
     <Compile Include="Teacher.GUI\frmGiangVien.Designer.cs">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLyHoatDongLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.Designer.cs">
+      <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +122,15 @@
     </Compile>
     <EmbeddedResource Include="System.GUI\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmGiangVien.resx">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.resx">
+      <DependentUpon>frmQuanLyHoatDongLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmThongTinCaNhanGiangVien.resx">
+      <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

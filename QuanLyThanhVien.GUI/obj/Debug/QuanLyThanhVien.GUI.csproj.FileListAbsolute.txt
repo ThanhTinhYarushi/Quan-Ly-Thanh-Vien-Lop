@@ -11,3 +11,6 @@ C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLy
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmSinhVien.resources
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.frmSignUp.resources
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmThongTinCaNhanSinhVien.resources
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmGiangVien.resources
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmQuanLyHoatDongLopHoc.resources
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmThongTinCaNhanGiangVien.resources

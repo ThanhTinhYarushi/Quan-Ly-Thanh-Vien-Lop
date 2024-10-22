@@ -1,4 +1,5 @@
 ﻿using QuanLyThanhVien.GUI.Students.GUI;
+using QuanLyThanhVien.GUI.Teacher.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace QuanLyThanhVien.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogIn());
+            Application.Run(new frmGiangVien());
         }
     }
 }

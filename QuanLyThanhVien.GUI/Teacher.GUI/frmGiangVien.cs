@@ -16,5 +16,73 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         {
             InitializeComponent();
         }
+        
+        private void hideForm()
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Hide();
+            }
+        }
+
+        private void tsm_XemThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmThongTinCaNhanGiangVien")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmThongTinCaNhanGiangVien frmNV = new frmThongTinCaNhanGiangVien();
+            frmNV.MdiParent = this;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void tsb_QuanLyLopHoc_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmQuanLyLopHoc")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmQuanLyLopHoc frmNV = new frmQuanLyLopHoc();
+            frmNV.MdiParent = this;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void tsb_QuanLyHoatDong_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmNhanVien")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmQuanLyHoatDongLopHoc frmNV = new frmQuanLyHoatDongLopHoc();
+            frmNV.MdiParent = this;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
     }
 }

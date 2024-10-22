@@ -4,16 +4,16 @@
   "Documents": [
     {
 <<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|solutionrelative:quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|solutionrelative:quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.gui\\teacher.gui\\frmquanlyhoatdonglophoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|solutionrelative:quanlythanhvien.gui\\teacher.gui\\frmquanlyhoatdonglophoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|solutionrelative:quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|solutionrelative:quanlythanhvien.gui\\teacher.gui\\frmgiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34AF388F-B798-40AA-BEE0-C6EBE9E18876}|QuanLyThanhVien.GUI\\QuanLyThanhVien.GUI.csproj|c:\\users\\thanh\\source\\repos\\quanlythanhvien\\quanlythanhvien.gui\\teacher.gui\\frmthongtincanhangiangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -75,24 +75,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmGiangVien.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
-              "RelativeDocumentMoniker": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
-              "ToolTip": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs [Design]*",
-              "RelativeToolTip": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T12:37:20.561Z",
-=======
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 2,
+              "Title": "frmGiangVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
+              "RelativeDocumentMoniker": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
+              "ToolTip": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs [Design]",
+              "RelativeToolTip": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T12:37:20.561Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmGiangVien.cs",
+              "DocumentMoniker": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
+              "RelativeDocumentMoniker": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
+              "ToolTip": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
+              "RelativeToolTip": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowEMAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T13:50:02.534Z",
+=======
               "DocumentIndex": 1,
               "Title": "QLTV.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\git\\Quan-Ly-Thanh-Vien-Lop\\QuanLyThanhVien.DAL\\Entities\\QLTV.edmx",
@@ -114,23 +124,12 @@
               "RelativeToolTip": "QuanLyThanhVien.GUI\\Students.GUI\\frmHoatDong.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T12:52:45.48Z",
->>>>>>> 6d384a6660c20112cf0d8a55a0c10665180a9920
               "IsPinned": true,
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-<<<<<<< HEAD
-              "Title": "frmGiangVien.cs",
-              "DocumentMoniker": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
-              "RelativeDocumentMoniker": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs",
-              "ToolTip": "C:\\Users\\thanh\\source\\repos\\QuanLyThanhVien\\QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs*",
-              "RelativeToolTip": "QuanLyThanhVien.GUI\\Teacher.GUI\\frmGiangVien.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowEMAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T13:50:02.534Z",
-=======
               "Title": "frmHoatDong.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\git\\Quan-Ly-Thanh-Vien-Lop\\QuanLyThanhVien.GUI\\Students.GUI\\frmHoatDong.cs",
               "RelativeDocumentMoniker": "QuanLyThanhVien.GUI\\Students.GUI\\frmHoatDong.cs",

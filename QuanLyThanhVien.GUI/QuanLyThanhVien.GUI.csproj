@@ -46,19 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Admin.GUI\frmAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin.GUI\frmAdmin.Designer.cs">
-      <DependentUpon>frmAdmin.cs</DependentUpon>
-=======
     <Compile Include="Students.GUI\frmHoatDong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Students.GUI\frmHoatDong.Designer.cs">
       <DependentUpon>frmHoatDong.cs</DependentUpon>
->>>>>>> 6d384a6660c20112cf0d8a55a0c10665180a9920
     </Compile>
     <Compile Include="Students.GUI\frmSinhVien.cs">
       <SubType>Form</SubType>
@@ -92,7 +84,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="Teacher.GUI\frmGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,11 +108,9 @@
     <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
     </Compile>
-=======
     <EmbeddedResource Include="Students.GUI\frmHoatDong.resx">
       <DependentUpon>frmHoatDong.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> 6d384a6660c20112cf0d8a55a0c10665180a9920
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>

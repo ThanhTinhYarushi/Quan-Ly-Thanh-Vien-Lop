@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Students.GUI\frmHoatDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.GUI\frmHoatDong.Designer.cs">
+      <DependentUpon>frmHoatDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.GUI\frmSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Students.GUI\frmThongTinCaNhanSinhVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students.GUI\ThongTinLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.GUI\ThongTinLopHoc.Designer.cs">
+      <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="System.GUI\frmLogIn.cs">
       <SubType>Form</SubType>
@@ -72,11 +84,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Students.GUI\frmHoatDong.resx">
+      <DependentUpon>frmHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmThongTinCaNhanSinhVien.resx">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students.GUI\ThongTinLopHoc.resx">
+      <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System.GUI\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>

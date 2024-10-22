@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinhVien));
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemThôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsm_ThongTinCaNhan = new System.Windows.Forms.ToolStripButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsm_HocVu = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,19 +58,9 @@
             this.hệThốngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1046, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1290, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsm_ThongTinCaNhan});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1046, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
             // 
             // hệThốngToolStripMenuItem
             // 
@@ -90,6 +83,17 @@
             this.thoátToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsm_ThongTinCaNhan,
+            this.tsm_HocVu});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1290, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
             // tsm_ThongTinCaNhan
             // 
             this.tsm_ThongTinCaNhan.Image = ((System.Drawing.Image)(resources.GetObject("tsm_ThongTinCaNhan.Image")));
@@ -99,11 +103,25 @@
             this.tsm_ThongTinCaNhan.Text = "Thông Tin Cá Nhân";
             this.tsm_ThongTinCaNhan.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // tsm_HocVu
+            // 
+            this.tsm_HocVu.Image = ((System.Drawing.Image)(resources.GetObject("tsm_HocVu.Image")));
+            this.tsm_HocVu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsm_HocVu.Name = "tsm_HocVu";
+            this.tsm_HocVu.Size = new System.Drawing.Size(66, 22);
+            this.tsm_HocVu.Text = "Học Vụ";
+            this.tsm_HocVu.ToolTipText = "Học Vụ";
+            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 658);
+            this.ClientSize = new System.Drawing.Size(1290, 752);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -129,5 +147,7 @@
         private System.Windows.Forms.ToolStripMenuItem xemThôngTinCáNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tsm_ThongTinCaNhan;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripButton tsm_HocVu;
     }
 }

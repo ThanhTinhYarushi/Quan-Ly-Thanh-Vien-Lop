@@ -11,3 +11,16 @@ C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLy
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmSinhVien.resources
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.frmSignUp.resources
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmThongTinCaNhanSinhVien.resources
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\bin\Debug\QuanLyThanhVien.GUI.exe.config
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\bin\Debug\QuanLyThanhVien.GUI.exe
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\bin\Debug\QuanLyThanhVien.GUI.pdb
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmSinhVien.resources
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmThongTinCaNhanSinhVien.resources
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.frmLogIn.resources
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Properties.Resources.resources
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.frmSignUp.resources
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.exe
+C:\Users\Admin\Documents\git\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.pdb

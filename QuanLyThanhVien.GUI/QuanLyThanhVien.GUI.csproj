@@ -120,11 +120,11 @@
     <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teacher.GUI\frmXemThongTinCoBan.cs">
+    <Compile Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Teacher.GUI\frmXemThongTinCoBan.Designer.cs">
-      <DependentUpon>frmXemThongTinCoBan.cs</DependentUpon>
+    <Compile Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.Designer.cs">
+      <DependentUpon>frmXemThongTinPhanHoiSinhVien.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
@@ -167,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher.GUI\frmThongTinCaNhanGiangVien.resx">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.resx">
+      <DependentUpon>frmXemThongTinPhanHoiSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

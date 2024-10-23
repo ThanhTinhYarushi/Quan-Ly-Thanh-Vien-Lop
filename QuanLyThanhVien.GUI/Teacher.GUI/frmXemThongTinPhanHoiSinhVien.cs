@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThanhVien.GUI.Teacher.GUI
 {
-    public partial class frmXemThongTinCoBan : Form
+    public partial class frmXemThongTinPhanHoiSinhVien : Form
     {
-        public frmXemThongTinCoBan()
+        public frmXemThongTinPhanHoiSinhVien()
         {
             InitializeComponent();
         }

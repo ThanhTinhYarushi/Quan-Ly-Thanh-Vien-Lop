@@ -84,5 +84,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             frmNV.WindowState = FormWindowState.Maximized;
             frmNV.Show();
         }
+
+       
     }
 }

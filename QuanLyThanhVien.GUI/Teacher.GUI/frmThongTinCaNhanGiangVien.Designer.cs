@@ -216,6 +216,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmThongTinCaNhanGiangVien";
             this.Text = "frmThongTinCaNhanGiangVien";
+            this.Load += new System.EventHandler(this.frmThongTinCaNhanGiangVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_AnhDaiDien)).EndInit();

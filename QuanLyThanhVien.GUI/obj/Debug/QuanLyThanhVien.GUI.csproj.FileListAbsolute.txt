@@ -14,3 +14,7 @@ C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLy
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmGiangVien.resources
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmQuanLyHoatDongLopHoc.resources
 C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmThongTinCaNhanGiangVien.resources
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmDiemDanh.resources
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmGuiThongBao.resources
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmNhapVaQuanLyDiem.resources
+C:\Users\thanh\source\repos\QuanLyThanhVien\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmQuanLyLopHoc.resources

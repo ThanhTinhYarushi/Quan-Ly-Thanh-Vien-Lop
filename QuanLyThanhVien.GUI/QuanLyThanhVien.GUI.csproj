@@ -78,11 +78,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teacher.GUI\frmDiemDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmDiemDanh.Designer.cs">
+      <DependentUpon>frmDiemDanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher.GUI\frmGiangVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Teacher.GUI\frmGiangVien.Designer.cs">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmGuiThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmGuiThongBao.Designer.cs">
+      <DependentUpon>frmGuiThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmNhapVaQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmNhapVaQuanLyDiem.Designer.cs">
+      <DependentUpon>frmNhapVaQuanLyDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.cs">
       <SubType>Form</SubType>
@@ -101,6 +119,12 @@
     </Compile>
     <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmXemThongTinCoBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmXemThongTinCoBan.Designer.cs">
+      <DependentUpon>frmXemThongTinCoBan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
@@ -123,11 +147,23 @@
     <EmbeddedResource Include="System.GUI\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmDiemDanh.resx">
+      <DependentUpon>frmDiemDanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher.GUI\frmGiangVien.resx">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmGuiThongBao.resx">
+      <DependentUpon>frmGuiThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmNhapVaQuanLyDiem.resx">
+      <DependentUpon>frmNhapVaQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.resx">
       <DependentUpon>frmQuanLyHoatDongLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmQuanLyLopHoc.resx">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher.GUI\frmThongTinCaNhanGiangVien.resx">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>

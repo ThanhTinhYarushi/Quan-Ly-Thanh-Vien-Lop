@@ -85,6 +85,84 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             frmNV.Show();
         }
 
-       
+        private void tsb_GuiThongBao_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmGuiThongBao")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmGuiThongBao frm = new frmGuiThongBao();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_DiemDanh_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmDiemDanh")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmDiemDanh frm = new frmDiemDanh();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_NhapVaQuanLyDiem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmNhapVaQuanLyDiem")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmNhapVaQuanLyDiem frm = new frmNhapVaQuanLyDiem();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_XemThongTinPhanHoi_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmThongTinCaNhanGiangVien")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmXemThongTinCoBan frm = new frmXemThongTinCoBan();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThanhVien.GUI.Teacher.GUI
 {
-    partial class frmQuanLyLopHoc
+    partial class frmNhapVaQuanLyDiem
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // frmQuanLyLopHoc
+            // frmNhapVaQuanLyDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 648);
-            this.Name = "frmQuanLyLopHoc";
-            this.Text = "frmQuanLyLopHoc";
+            this.Name = "frmNhapVaQuanLyDiem";
+            this.Text = "frmNhapVaQuanLyDiem";
             this.ResumeLayout(false);
 
         }

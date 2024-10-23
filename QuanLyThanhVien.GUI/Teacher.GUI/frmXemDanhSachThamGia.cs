@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyThanhVien.GUI.Teacher.GUI
 {
-    public partial class frmGuiThongBao : Form
+    public partial class frmXemDanhSachThamGia : Form
     {
-        public frmGuiThongBao()
+        public frmXemDanhSachThamGia()
         {
             InitializeComponent();
         }
 
-        
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

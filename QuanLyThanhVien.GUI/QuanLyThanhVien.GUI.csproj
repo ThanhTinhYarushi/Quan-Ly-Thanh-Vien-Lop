@@ -120,6 +120,12 @@
     <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher.GUI\frmXemDanhSachThamGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmXemDanhSachThamGia.Designer.cs">
+      <DependentUpon>frmXemDanhSachThamGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher.GUI\frmThongTinCaNhanGiangVien.resx">
       <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmXemDanhSachThamGia.resx">
+      <DependentUpon>frmXemDanhSachThamGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.resx">
       <DependentUpon>frmXemThongTinPhanHoiSinhVien.cs</DependentUpon>

@@ -16,5 +16,11 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         {
             InitializeComponent();
         }
+
+        private void btn_XemDanhSachThamGia_Click(object sender, EventArgs e)
+        {
+            frmXemDanhSachThamGia frm = new frmXemDanhSachThamGia();
+            frm.ShowDialog();
+        }
     }
 }

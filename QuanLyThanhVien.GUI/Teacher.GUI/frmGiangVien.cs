@@ -27,6 +27,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void tsm_XemThongTinCaNhan_Click(object sender, EventArgs e)
         {
+            hideForm();
             foreach (Form f in this.MdiChildren)
             {
                 if (f.Name == "frmThongTinCaNhanGiangVien")
@@ -47,6 +48,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void tsb_QuanLyLopHoc_Click(object sender, EventArgs e)
         {
+            hideForm();
             foreach (Form f in this.MdiChildren)
             {
                 if (f.Name == "frmQuanLyLopHoc")
@@ -67,6 +69,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void tsb_QuanLyHoatDong_Click(object sender, EventArgs e)
         {
+            hideForm();
             foreach (Form f in this.MdiChildren)
             {
                 if (f.Name == "frmNhanVien")
@@ -83,6 +86,95 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             frmNV.MdiParent = this;
             frmNV.WindowState = FormWindowState.Maximized;
             frmNV.Show();
+        }
+
+        private void tsb_GuiThongBao_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmGuiThongBao")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmGuiThongBao frm = new frmGuiThongBao();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_DiemDanh_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmDiemDanh")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmDiemDanh frm = new frmDiemDanh();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_NhapVaQuanLyDiem_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmNhapVaQuanLyDiem")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmNhapVaQuanLyDiem frm = new frmNhapVaQuanLyDiem();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_XemThongTinPhanHoi_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmXemThongTinPhanHoiSinhVien")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmXemThongTinPhanHoiSinhVien frm = new frmXemThongTinPhanHoiSinhVien();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

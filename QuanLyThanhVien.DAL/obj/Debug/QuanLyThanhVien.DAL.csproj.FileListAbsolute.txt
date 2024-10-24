@@ -34,3 +34,15 @@ C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVi
 C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyTh.EDF589BE.Up2Date
 C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.dll
 C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.pdb
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.dll.config
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.dll
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\bin\Debug\QuanLyThanhVien.DAL.pdb
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\obj\Debug\QuanLyTh.EDF589BE.Up2Date
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.dll
+C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.DAL\obj\Debug\QuanLyThanhVien.DAL.pdb

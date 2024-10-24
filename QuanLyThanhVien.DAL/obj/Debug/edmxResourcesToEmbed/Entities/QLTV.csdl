@@ -9,8 +9,8 @@
     <Property Name="ClassID" Type="Int32" Nullable="false" />
     <Property Name="MonHoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Diem1" Type="Double" Nullable="false" />
-    <NavigationProperty Name="Lop" Relationship="Self.FK__Diem__ClassID__5629CD9C" FromRole="Diem" ToRole="Lop" />
-    <NavigationProperty Name="SinhVien" Relationship="Self.FK__Diem__MSSV__5535A963" FromRole="Diem" ToRole="SinhVien" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK__Diem__ClassID__48CFD27E" FromRole="Diem" ToRole="Lop" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK__Diem__MSSV__47DBAE45" FromRole="Diem" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="DiemDanh">
     <Key>
@@ -21,8 +21,8 @@
     <Property Name="ClassID" Type="Int32" Nullable="false" />
     <Property Name="NgayDiemDanh" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="TrangThai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Lop" Relationship="Self.FK__DiemDanh__ClassI__5DCAEF64" FromRole="DiemDanh" ToRole="Lop" />
-    <NavigationProperty Name="SinhVien" Relationship="Self.FK__DiemDanh__MSSV__5CD6CB2B" FromRole="DiemDanh" ToRole="SinhVien" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK__DiemDanh__ClassI__5165187F" FromRole="DiemDanh" ToRole="Lop" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK__DiemDanh__MSSV__5070F446" FromRole="DiemDanh" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="GiaoVien">
     <Key>
@@ -34,8 +34,9 @@
     <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
-    <NavigationProperty Name="HoatDong" Relationship="Self.FK__HoatDong__MSGV__73BA3083" FromRole="GiaoVien" ToRole="HoatDong" />
-    <NavigationProperty Name="UserAccount" Relationship="Self.FK__UserAccoun__MSGV__70DDC3D8" FromRole="GiaoVien" ToRole="UserAccount" />
+    <NavigationProperty Name="UserAccount" Relationship="Self.FK__UserAccoun__MSGV__7E37BEF6" FromRole="GiaoVien" ToRole="UserAccount" />
+    <NavigationProperty Name="HoatDong" Relationship="Self.FK_HoatDong_GiaoVien" FromRole="GiaoVien" ToRole="HoatDong" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK_Lop_GiaoVien" FromRole="GiaoVien" ToRole="Lop" />
   </EntityType>
   <EntityType Name="HoatDong">
     <Key>
@@ -48,11 +49,11 @@
     <Property Name="ThoiGian" Type="Time" Nullable="false" Precision="7" />
     <Property Name="DiaDiem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ClassID" Type="Int32" />
-    <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="GiaoVien" Relationship="Self.FK__HoatDong__MSGV__73BA3083" FromRole="HoatDong" ToRole="GiaoVien" />
-    <NavigationProperty Name="Lop" Relationship="Self.FK__HoatDong__ClassI__60A75C0F" FromRole="HoatDong" ToRole="Lop" />
-    <NavigationProperty Name="PhanHoi" Relationship="Self.FK__PhanHoi__HoatDon__6B24EA82" FromRole="HoatDong" ToRole="PhanHoi" />
-    <NavigationProperty Name="ThamGia" Relationship="Self.FK__ThamGia__HoatDon__6383C8BA" FromRole="HoatDong" ToRole="ThamGia" />
+    <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GiaoVien" Relationship="Self.FK_HoatDong_GiaoVien" FromRole="HoatDong" ToRole="GiaoVien" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK__HoatDong__ClassI__5441852A" FromRole="HoatDong" ToRole="Lop" />
+    <NavigationProperty Name="PhanHoi" Relationship="Self.FK__PhanHoi__HoatDon__5EBF139D" FromRole="HoatDong" ToRole="PhanHoi" />
+    <NavigationProperty Name="ThamGia" Relationship="Self.FK__ThamGia__HoatDon__571DF1D5" FromRole="HoatDong" ToRole="ThamGia" />
   </EntityType>
   <EntityType Name="Lop">
     <Key>
@@ -63,11 +64,12 @@
     <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="TietHoc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Phong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Diem" Relationship="Self.FK__Diem__ClassID__5629CD9C" FromRole="Lop" ToRole="Diem" />
-    <NavigationProperty Name="DiemDanh" Relationship="Self.FK__DiemDanh__ClassI__5DCAEF64" FromRole="Lop" ToRole="DiemDanh" />
-    <NavigationProperty Name="HoatDong" Relationship="Self.FK__HoatDong__ClassI__60A75C0F" FromRole="Lop" ToRole="HoatDong" />
-    <NavigationProperty Name="LopSinhVien" Relationship="Self.FK__LopSinhVi__Class__5165187F" FromRole="Lop" ToRole="LopSinhVien" />
-    <NavigationProperty Name="ThongBao" Relationship="Self.FK__ThongBao__ClassI__59FA5E80" FromRole="Lop" ToRole="ThongBao" />
+    <NavigationProperty Name="Diem" Relationship="Self.FK__Diem__ClassID__48CFD27E" FromRole="Lop" ToRole="Diem" />
+    <NavigationProperty Name="DiemDanh" Relationship="Self.FK__DiemDanh__ClassI__5165187F" FromRole="Lop" ToRole="DiemDanh" />
+    <NavigationProperty Name="GiaoVien" Relationship="Self.FK_Lop_GiaoVien" FromRole="Lop" ToRole="GiaoVien" />
+    <NavigationProperty Name="HoatDong" Relationship="Self.FK__HoatDong__ClassI__5441852A" FromRole="Lop" ToRole="HoatDong" />
+    <NavigationProperty Name="LopSinhVien" Relationship="Self.FK__LopSinhVi__Class__440B1D61" FromRole="Lop" ToRole="LopSinhVien" />
+    <NavigationProperty Name="ThongBao" Relationship="Self.FK__ThongBao__ClassI__4D94879B" FromRole="Lop" ToRole="ThongBao" />
   </EntityType>
   <EntityType Name="LopSinhVien">
     <Key>
@@ -76,8 +78,8 @@
     <Property Name="LopSinhVienID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ClassID" Type="Int32" Nullable="false" />
     <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Lop" Relationship="Self.FK__LopSinhVi__Class__5165187F" FromRole="LopSinhVien" ToRole="Lop" />
-    <NavigationProperty Name="SinhVien" Relationship="Self.FK__LopSinhVie__MSSV__52593CB8" FromRole="LopSinhVien" ToRole="SinhVien" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK__LopSinhVi__Class__440B1D61" FromRole="LopSinhVien" ToRole="Lop" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK__LopSinhVie__MSSV__44FF419A" FromRole="LopSinhVien" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="PhanHoi">
     <Key>
@@ -88,8 +90,8 @@
     <Property Name="HoatDongID" Type="Int32" />
     <Property Name="NoiDung" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NgayPhanHoi" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="HoatDong" Relationship="Self.FK__PhanHoi__HoatDon__6B24EA82" FromRole="PhanHoi" ToRole="HoatDong" />
-    <NavigationProperty Name="SinhVien" Relationship="Self.FK__PhanHoi__MSSV__6A30C649" FromRole="PhanHoi" ToRole="SinhVien" />
+    <NavigationProperty Name="HoatDong" Relationship="Self.FK__PhanHoi__HoatDon__5EBF139D" FromRole="PhanHoi" ToRole="HoatDong" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK__PhanHoi__MSSV__5DCAEF64" FromRole="PhanHoi" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="RolePermission">
     <Key>
@@ -111,13 +113,13 @@
     <Property Name="SoDienThoai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="DiaChi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="ClassID" Type="Int32" />
-    <NavigationProperty Name="Diem" Relationship="Self.FK__Diem__MSSV__5535A963" FromRole="SinhVien" ToRole="Diem" />
-    <NavigationProperty Name="DiemDanh" Relationship="Self.FK__DiemDanh__MSSV__5CD6CB2B" FromRole="SinhVien" ToRole="DiemDanh" />
-    <NavigationProperty Name="LopSinhVien" Relationship="Self.FK__LopSinhVie__MSSV__52593CB8" FromRole="SinhVien" ToRole="LopSinhVien" />
-    <NavigationProperty Name="PhanHoi" Relationship="Self.FK__PhanHoi__MSSV__6A30C649" FromRole="SinhVien" ToRole="PhanHoi" />
-    <NavigationProperty Name="ThamGia" Relationship="Self.FK__ThamGia__MSSV__6477ECF3" FromRole="SinhVien" ToRole="ThamGia" />
-    <NavigationProperty Name="ThanhToan" Relationship="Self.FK__ThanhToan__MSSV__6754599E" FromRole="SinhVien" ToRole="ThanhToan" />
-    <NavigationProperty Name="UserAccount" Relationship="Self.FK__UserAccoun__MSSV__6FE99F9F" FromRole="SinhVien" ToRole="UserAccount" />
+    <NavigationProperty Name="Diem" Relationship="Self.FK__Diem__MSSV__47DBAE45" FromRole="SinhVien" ToRole="Diem" />
+    <NavigationProperty Name="DiemDanh" Relationship="Self.FK__DiemDanh__MSSV__5070F446" FromRole="SinhVien" ToRole="DiemDanh" />
+    <NavigationProperty Name="LopSinhVien" Relationship="Self.FK__LopSinhVie__MSSV__44FF419A" FromRole="SinhVien" ToRole="LopSinhVien" />
+    <NavigationProperty Name="PhanHoi" Relationship="Self.FK__PhanHoi__MSSV__5DCAEF64" FromRole="SinhVien" ToRole="PhanHoi" />
+    <NavigationProperty Name="ThamGia" Relationship="Self.FK__ThamGia__MSSV__5812160E" FromRole="SinhVien" ToRole="ThamGia" />
+    <NavigationProperty Name="ThanhToan" Relationship="Self.FK__ThanhToan__MSSV__5AEE82B9" FromRole="SinhVien" ToRole="ThanhToan" />
+    <NavigationProperty Name="UserAccount" Relationship="Self.FK__UserAccoun__MSSV__7D439ABD" FromRole="SinhVien" ToRole="UserAccount" />
   </EntityType>
   <EntityType Name="ThamGia">
     <Key>
@@ -127,8 +129,8 @@
     <Property Name="HoatDongID" Type="Int32" Nullable="false" />
     <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="HoatDong" Relationship="Self.FK__ThamGia__HoatDon__6383C8BA" FromRole="ThamGia" ToRole="HoatDong" />
-    <NavigationProperty Name="SinhVien" Relationship="Self.FK__ThamGia__MSSV__6477ECF3" FromRole="ThamGia" ToRole="SinhVien" />
+    <NavigationProperty Name="HoatDong" Relationship="Self.FK__ThamGia__HoatDon__571DF1D5" FromRole="ThamGia" ToRole="HoatDong" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK__ThamGia__MSSV__5812160E" FromRole="ThamGia" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="ThanhToan">
     <Key>
@@ -140,7 +142,7 @@
     <Property Name="NgayThanhToan" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="HinhThucThanhToan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="GhiChu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="SinhVien" Relationship="Self.FK__ThanhToan__MSSV__6754599E" FromRole="ThanhToan" ToRole="SinhVien" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK__ThanhToan__MSSV__5AEE82B9" FromRole="ThanhToan" ToRole="SinhVien" />
   </EntityType>
   <EntityType Name="ThongBao">
     <Key>
@@ -151,7 +153,7 @@
     <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="ClassID" Type="Int32" />
-    <NavigationProperty Name="Lop" Relationship="Self.FK__ThongBao__ClassI__59FA5E80" FromRole="ThongBao" ToRole="Lop" />
+    <NavigationProperty Name="Lop" Relationship="Self.FK__ThongBao__ClassI__4D94879B" FromRole="ThongBao" ToRole="Lop" />
   </EntityType>
   <EntityType Name="UserAccount">
     <Key>
@@ -164,10 +166,10 @@
     <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="MSGV" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="CreatedAt" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="GiaoVien" Relationship="Self.FK__UserAccoun__MSGV__70DDC3D8" FromRole="UserAccount" ToRole="GiaoVien" />
-    <NavigationProperty Name="SinhVien" Relationship="Self.FK__UserAccoun__MSSV__6FE99F9F" FromRole="UserAccount" ToRole="SinhVien" />
+    <NavigationProperty Name="GiaoVien" Relationship="Self.FK__UserAccoun__MSGV__7E37BEF6" FromRole="UserAccount" ToRole="GiaoVien" />
+    <NavigationProperty Name="SinhVien" Relationship="Self.FK__UserAccoun__MSSV__7D439ABD" FromRole="UserAccount" ToRole="SinhVien" />
   </EntityType>
-  <Association Name="FK__Diem__ClassID__5629CD9C">
+  <Association Name="FK__Diem__ClassID__48CFD27E">
     <End Role="Lop" Type="Self.Lop" Multiplicity="1" />
     <End Role="Diem" Type="Self.Diem" Multiplicity="*" />
     <ReferentialConstraint>
@@ -179,7 +181,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Diem__MSSV__5535A963">
+  <Association Name="FK__Diem__MSSV__47DBAE45">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
     <End Role="Diem" Type="Self.Diem" Multiplicity="*" />
     <ReferentialConstraint>
@@ -191,7 +193,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DiemDanh__ClassI__5DCAEF64">
+  <Association Name="FK__DiemDanh__ClassI__5165187F">
     <End Role="Lop" Type="Self.Lop" Multiplicity="1" />
     <End Role="DiemDanh" Type="Self.DiemDanh" Multiplicity="*" />
     <ReferentialConstraint>
@@ -203,7 +205,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DiemDanh__MSSV__5CD6CB2B">
+  <Association Name="FK__DiemDanh__MSSV__5070F446">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
     <End Role="DiemDanh" Type="Self.DiemDanh" Multiplicity="*" />
     <ReferentialConstraint>
@@ -215,19 +217,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoatDong__MSGV__73BA3083">
-    <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="1" />
-    <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="GiaoVien">
-        <PropertyRef Name="MSGV" />
-      </Principal>
-      <Dependent Role="HoatDong">
-        <PropertyRef Name="MSGV" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__UserAccoun__MSGV__70DDC3D8">
+  <Association Name="FK__UserAccoun__MSGV__7E37BEF6">
     <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="0..1" />
     <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="*" />
     <ReferentialConstraint>
@@ -239,7 +229,31 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoatDong__ClassI__60A75C0F">
+  <Association Name="FK_HoatDong_GiaoVien">
+    <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="0..1" />
+    <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiaoVien">
+        <PropertyRef Name="MSGV" />
+      </Principal>
+      <Dependent Role="HoatDong">
+        <PropertyRef Name="MSGV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lop_GiaoVien">
+    <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="1" />
+    <End Role="Lop" Type="Self.Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiaoVien">
+        <PropertyRef Name="MSGV" />
+      </Principal>
+      <Dependent Role="Lop">
+        <PropertyRef Name="MSGV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoatDong__ClassI__5441852A">
     <End Role="Lop" Type="Self.Lop" Multiplicity="0..1" />
     <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -251,7 +265,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PhanHoi__HoatDon__6B24EA82">
+  <Association Name="FK__PhanHoi__HoatDon__5EBF139D">
     <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="0..1" />
     <End Role="PhanHoi" Type="Self.PhanHoi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -263,7 +277,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ThamGia__HoatDon__6383C8BA">
+  <Association Name="FK__ThamGia__HoatDon__571DF1D5">
     <End Role="HoatDong" Type="Self.HoatDong" Multiplicity="1" />
     <End Role="ThamGia" Type="Self.ThamGia" Multiplicity="*" />
     <ReferentialConstraint>
@@ -275,7 +289,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__LopSinhVi__Class__5165187F">
+  <Association Name="FK__LopSinhVi__Class__440B1D61">
     <End Role="Lop" Type="Self.Lop" Multiplicity="1" />
     <End Role="LopSinhVien" Type="Self.LopSinhVien" Multiplicity="*" />
     <ReferentialConstraint>
@@ -287,7 +301,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ThongBao__ClassI__59FA5E80">
+  <Association Name="FK__ThongBao__ClassI__4D94879B">
     <End Role="Lop" Type="Self.Lop" Multiplicity="0..1" />
     <End Role="ThongBao" Type="Self.ThongBao" Multiplicity="*" />
     <ReferentialConstraint>
@@ -299,7 +313,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__LopSinhVie__MSSV__52593CB8">
+  <Association Name="FK__LopSinhVie__MSSV__44FF419A">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
     <End Role="LopSinhVien" Type="Self.LopSinhVien" Multiplicity="*" />
     <ReferentialConstraint>
@@ -311,7 +325,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PhanHoi__MSSV__6A30C649">
+  <Association Name="FK__PhanHoi__MSSV__5DCAEF64">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
     <End Role="PhanHoi" Type="Self.PhanHoi" Multiplicity="*" />
     <ReferentialConstraint>
@@ -323,7 +337,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ThamGia__MSSV__6477ECF3">
+  <Association Name="FK__ThamGia__MSSV__5812160E">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
     <End Role="ThamGia" Type="Self.ThamGia" Multiplicity="*" />
     <ReferentialConstraint>
@@ -335,7 +349,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ThanhToan__MSSV__6754599E">
+  <Association Name="FK__ThanhToan__MSSV__5AEE82B9">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="1" />
     <End Role="ThanhToan" Type="Self.ThanhToan" Multiplicity="*" />
     <ReferentialConstraint>
@@ -347,7 +361,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__UserAccoun__MSSV__6FE99F9F">
+  <Association Name="FK__UserAccoun__MSSV__7D439ABD">
     <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="0..1" />
     <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="*" />
     <ReferentialConstraint>
@@ -359,7 +373,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="QLTVEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="QLTVEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Diem" EntityType="Self.Diem" />
     <EntitySet Name="DiemDanh" EntityType="Self.DiemDanh" />
     <EntitySet Name="GiaoVien" EntityType="Self.GiaoVien" />
@@ -373,67 +387,71 @@
     <EntitySet Name="ThanhToan" EntityType="Self.ThanhToan" />
     <EntitySet Name="ThongBao" EntityType="Self.ThongBao" />
     <EntitySet Name="UserAccount" EntityType="Self.UserAccount" />
-    <AssociationSet Name="FK__Diem__ClassID__5629CD9C" Association="Self.FK__Diem__ClassID__5629CD9C">
+    <AssociationSet Name="FK__Diem__ClassID__48CFD27E" Association="Self.FK__Diem__ClassID__48CFD27E">
       <End Role="Lop" EntitySet="Lop" />
       <End Role="Diem" EntitySet="Diem" />
     </AssociationSet>
-    <AssociationSet Name="FK__Diem__MSSV__5535A963" Association="Self.FK__Diem__MSSV__5535A963">
+    <AssociationSet Name="FK__Diem__MSSV__47DBAE45" Association="Self.FK__Diem__MSSV__47DBAE45">
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="Diem" EntitySet="Diem" />
     </AssociationSet>
-    <AssociationSet Name="FK__DiemDanh__ClassI__5DCAEF64" Association="Self.FK__DiemDanh__ClassI__5DCAEF64">
+    <AssociationSet Name="FK__DiemDanh__ClassI__5165187F" Association="Self.FK__DiemDanh__ClassI__5165187F">
       <End Role="Lop" EntitySet="Lop" />
       <End Role="DiemDanh" EntitySet="DiemDanh" />
     </AssociationSet>
-    <AssociationSet Name="FK__DiemDanh__MSSV__5CD6CB2B" Association="Self.FK__DiemDanh__MSSV__5CD6CB2B">
+    <AssociationSet Name="FK__DiemDanh__MSSV__5070F446" Association="Self.FK__DiemDanh__MSSV__5070F446">
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="DiemDanh" EntitySet="DiemDanh" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoatDong__MSGV__73BA3083" Association="Self.FK__HoatDong__MSGV__73BA3083">
-      <End Role="GiaoVien" EntitySet="GiaoVien" />
-      <End Role="HoatDong" EntitySet="HoatDong" />
-    </AssociationSet>
-    <AssociationSet Name="FK__UserAccoun__MSGV__70DDC3D8" Association="Self.FK__UserAccoun__MSGV__70DDC3D8">
+    <AssociationSet Name="FK__UserAccoun__MSGV__7E37BEF6" Association="Self.FK__UserAccoun__MSGV__7E37BEF6">
       <End Role="GiaoVien" EntitySet="GiaoVien" />
       <End Role="UserAccount" EntitySet="UserAccount" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoatDong__ClassI__60A75C0F" Association="Self.FK__HoatDong__ClassI__60A75C0F">
+    <AssociationSet Name="FK_HoatDong_GiaoVien" Association="Self.FK_HoatDong_GiaoVien">
+      <End Role="GiaoVien" EntitySet="GiaoVien" />
+      <End Role="HoatDong" EntitySet="HoatDong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lop_GiaoVien" Association="Self.FK_Lop_GiaoVien">
+      <End Role="GiaoVien" EntitySet="GiaoVien" />
+      <End Role="Lop" EntitySet="Lop" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoatDong__ClassI__5441852A" Association="Self.FK__HoatDong__ClassI__5441852A">
       <End Role="Lop" EntitySet="Lop" />
       <End Role="HoatDong" EntitySet="HoatDong" />
     </AssociationSet>
-    <AssociationSet Name="FK__PhanHoi__HoatDon__6B24EA82" Association="Self.FK__PhanHoi__HoatDon__6B24EA82">
+    <AssociationSet Name="FK__PhanHoi__HoatDon__5EBF139D" Association="Self.FK__PhanHoi__HoatDon__5EBF139D">
       <End Role="HoatDong" EntitySet="HoatDong" />
       <End Role="PhanHoi" EntitySet="PhanHoi" />
     </AssociationSet>
-    <AssociationSet Name="FK__ThamGia__HoatDon__6383C8BA" Association="Self.FK__ThamGia__HoatDon__6383C8BA">
+    <AssociationSet Name="FK__ThamGia__HoatDon__571DF1D5" Association="Self.FK__ThamGia__HoatDon__571DF1D5">
       <End Role="HoatDong" EntitySet="HoatDong" />
       <End Role="ThamGia" EntitySet="ThamGia" />
     </AssociationSet>
-    <AssociationSet Name="FK__LopSinhVi__Class__5165187F" Association="Self.FK__LopSinhVi__Class__5165187F">
+    <AssociationSet Name="FK__LopSinhVi__Class__440B1D61" Association="Self.FK__LopSinhVi__Class__440B1D61">
       <End Role="Lop" EntitySet="Lop" />
       <End Role="LopSinhVien" EntitySet="LopSinhVien" />
     </AssociationSet>
-    <AssociationSet Name="FK__ThongBao__ClassI__59FA5E80" Association="Self.FK__ThongBao__ClassI__59FA5E80">
+    <AssociationSet Name="FK__ThongBao__ClassI__4D94879B" Association="Self.FK__ThongBao__ClassI__4D94879B">
       <End Role="Lop" EntitySet="Lop" />
       <End Role="ThongBao" EntitySet="ThongBao" />
     </AssociationSet>
-    <AssociationSet Name="FK__LopSinhVie__MSSV__52593CB8" Association="Self.FK__LopSinhVie__MSSV__52593CB8">
+    <AssociationSet Name="FK__LopSinhVie__MSSV__44FF419A" Association="Self.FK__LopSinhVie__MSSV__44FF419A">
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="LopSinhVien" EntitySet="LopSinhVien" />
     </AssociationSet>
-    <AssociationSet Name="FK__PhanHoi__MSSV__6A30C649" Association="Self.FK__PhanHoi__MSSV__6A30C649">
+    <AssociationSet Name="FK__PhanHoi__MSSV__5DCAEF64" Association="Self.FK__PhanHoi__MSSV__5DCAEF64">
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="PhanHoi" EntitySet="PhanHoi" />
     </AssociationSet>
-    <AssociationSet Name="FK__ThamGia__MSSV__6477ECF3" Association="Self.FK__ThamGia__MSSV__6477ECF3">
+    <AssociationSet Name="FK__ThamGia__MSSV__5812160E" Association="Self.FK__ThamGia__MSSV__5812160E">
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="ThamGia" EntitySet="ThamGia" />
     </AssociationSet>
-    <AssociationSet Name="FK__ThanhToan__MSSV__6754599E" Association="Self.FK__ThanhToan__MSSV__6754599E">
+    <AssociationSet Name="FK__ThanhToan__MSSV__5AEE82B9" Association="Self.FK__ThanhToan__MSSV__5AEE82B9">
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="ThanhToan" EntitySet="ThanhToan" />
     </AssociationSet>
-    <AssociationSet Name="FK__UserAccoun__MSSV__6FE99F9F" Association="Self.FK__UserAccoun__MSSV__6FE99F9F">
+    <AssociationSet Name="FK__UserAccoun__MSSV__7D439ABD" Association="Self.FK__UserAccoun__MSSV__7D439ABD">
       <End Role="SinhVien" EntitySet="SinhVien" />
       <End Role="UserAccount" EntitySet="UserAccount" />
     </AssociationSet>

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPhong = new System.Windows.Forms.TextBox();
-            this.txtTiethoc = new System.Windows.Forms.TextBox();
             this.txtMagiangvien = new System.Windows.Forms.TextBox();
             this.txtTenlop = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,36 +51,24 @@
             this.txt_Tim = new System.Windows.Forms.TextBox();
             this.btnDangki = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.dateNgay = new System.Windows.Forms.DateTimePicker();
+            this.dateGio = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtPhong
-            // 
-            this.txtPhong.Location = new System.Drawing.Point(119, 244);
-            this.txtPhong.Name = "txtPhong";
-            this.txtPhong.Size = new System.Drawing.Size(100, 20);
-            this.txtPhong.TabIndex = 2;
-            // 
-            // txtTiethoc
-            // 
-            this.txtTiethoc.Location = new System.Drawing.Point(119, 191);
-            this.txtTiethoc.Name = "txtTiethoc";
-            this.txtTiethoc.Size = new System.Drawing.Size(100, 20);
-            this.txtTiethoc.TabIndex = 2;
             // 
             // txtMagiangvien
             // 
             this.txtMagiangvien.Location = new System.Drawing.Point(119, 138);
             this.txtMagiangvien.Name = "txtMagiangvien";
-            this.txtMagiangvien.Size = new System.Drawing.Size(100, 20);
+            this.txtMagiangvien.Size = new System.Drawing.Size(124, 20);
             this.txtMagiangvien.TabIndex = 2;
             // 
             // txtTenlop
             // 
             this.txtTenlop.Location = new System.Drawing.Point(119, 78);
             this.txtTenlop.Name = "txtTenlop";
-            this.txtTenlop.Size = new System.Drawing.Size(100, 20);
+            this.txtTenlop.Size = new System.Drawing.Size(124, 20);
             this.txtTenlop.TabIndex = 2;
             // 
             // label6
@@ -124,11 +110,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateGio);
+            this.groupBox1.Controls.Add(this.dateNgay);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.txtPhong);
-            this.groupBox1.Controls.Add(this.txtTiethoc);
             this.groupBox1.Controls.Add(this.txtMagiangvien);
             this.groupBox1.Controls.Add(this.txtTenlop);
             this.groupBox1.Controls.Add(this.label1);
@@ -164,7 +150,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(119, 295);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(124, 20);
             this.textBox1.TabIndex = 2;
             // 
             // label1
@@ -267,6 +253,22 @@
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dateNgay
+            // 
+            this.dateNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateNgay.Location = new System.Drawing.Point(119, 194);
+            this.dateNgay.Name = "dateNgay";
+            this.dateNgay.Size = new System.Drawing.Size(124, 20);
+            this.dateNgay.TabIndex = 15;
+            // 
+            // dateGio
+            // 
+            this.dateGio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateGio.Location = new System.Drawing.Point(119, 247);
+            this.dateGio.Name = "dateGio";
+            this.dateGio.Size = new System.Drawing.Size(124, 20);
+            this.dateGio.TabIndex = 15;
+            // 
             // frmHoatDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,8 +292,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtPhong;
-        private System.Windows.Forms.TextBox txtTiethoc;
         private System.Windows.Forms.TextBox txtMagiangvien;
         private System.Windows.Forms.TextBox txtTenlop;
         private System.Windows.Forms.Label label6;
@@ -315,5 +315,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DateTimePicker dateGio;
+        private System.Windows.Forms.DateTimePicker dateNgay;
     }
 }

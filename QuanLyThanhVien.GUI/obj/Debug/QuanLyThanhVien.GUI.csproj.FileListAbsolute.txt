@@ -82,3 +82,15 @@ C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GU
 C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmQuanLyLopHoc.resources
 C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmXemDanhSachThamGia.resources
 C:\Users\ADMIN\Documents\Backup\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmXemThongTinPhanHoiSinhVien.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmDiem.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmHoatDong.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmLopSinhVien.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmPhanHoi.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmThamGia.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Students.GUI.frmThongBao.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmDiemDanh.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmGuiThongBao.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmNhapVaQuanLyDiem.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmQuanLyLopHoc.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmXemDanhSachThamGia.resources
+C:\Users\ADMIN\Documents\QuanLyThanhVienLop\Quan-Ly-Thanh-Vien-Lop\QuanLyThanhVien.GUI\obj\Debug\QuanLyThanhVien.GUI.Teacher.GUI.frmXemThongTinPhanHoiSinhVien.resources

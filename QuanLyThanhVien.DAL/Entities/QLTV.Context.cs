@@ -13,10 +13,10 @@ namespace QuanLyThanhVien.DAL.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLTVEntities1 : DbContext
+    public partial class QLTV2Entities : DbContext
     {
-        public QLTVEntities1()
-            : base("name=QLTVEntities1")
+        public QLTV2Entities()
+            : base("name=QLTV2Entities")
         {
         }
     
@@ -38,5 +38,6 @@ namespace QuanLyThanhVien.DAL.Entities
         public virtual DbSet<ThanhToan> ThanhToan { get; set; }
         public virtual DbSet<ThongBao> ThongBao { get; set; }
         public virtual DbSet<UserAccount> UserAccount { get; set; }
+        public virtual DbSet<ViPham> ViPham { get; set; }
     }
 }

@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QLTVModelStoreContainer" CdmEntityContainer="QLTVEntities1">
+  <EntityContainerMapping StorageEntityContainer="QLTV2ModelStoreContainer" CdmEntityContainer="QLTV2Entities">
     <EntitySetMapping Name="Diem">
-      <EntityTypeMapping TypeName="QLTVModel.Diem">
+      <EntityTypeMapping TypeName="QLTV2Model.Diem">
         <MappingFragment StoreEntitySet="Diem">
           <ScalarProperty Name="DiemID" ColumnName="DiemID" />
           <ScalarProperty Name="MSSV" ColumnName="MSSV" />
           <ScalarProperty Name="ClassID" ColumnName="ClassID" />
-          <ScalarProperty Name="MonHoc" ColumnName="MonHoc" />
-          <ScalarProperty Name="Diem1" ColumnName="Diem" />
+          <ScalarProperty Name="DiemCK" ColumnName="DiemCK" />
+          <ScalarProperty Name="DiemGK" ColumnName="DiemGK" />
+          <ScalarProperty Name="DiemQT" ColumnName="DiemQT" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DiemDanh">
-      <EntityTypeMapping TypeName="QLTVModel.DiemDanh">
+      <EntityTypeMapping TypeName="QLTV2Model.DiemDanh">
         <MappingFragment StoreEntitySet="DiemDanh">
           <ScalarProperty Name="DiemDanhID" ColumnName="DiemDanhID" />
           <ScalarProperty Name="MSSV" ColumnName="MSSV" />
@@ -24,7 +25,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="GiaoVien">
-      <EntityTypeMapping TypeName="QLTVModel.GiaoVien">
+      <EntityTypeMapping TypeName="QLTV2Model.GiaoVien">
         <MappingFragment StoreEntitySet="GiaoVien">
           <ScalarProperty Name="MSGV" ColumnName="MSGV" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -32,11 +33,12 @@
           <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="TrangThaiGV" ColumnName="TrangThaiGV" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HoatDong">
-      <EntityTypeMapping TypeName="QLTVModel.HoatDong">
+      <EntityTypeMapping TypeName="QLTV2Model.HoatDong">
         <MappingFragment StoreEntitySet="HoatDong">
           <ScalarProperty Name="HoatDongID" ColumnName="HoatDongID" />
           <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
@@ -50,18 +52,19 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Lop">
-      <EntityTypeMapping TypeName="QLTVModel.Lop">
+      <EntityTypeMapping TypeName="QLTV2Model.Lop">
         <MappingFragment StoreEntitySet="Lop">
           <ScalarProperty Name="ClassID" ColumnName="ClassID" />
           <ScalarProperty Name="TenLop" ColumnName="TenLop" />
           <ScalarProperty Name="MSGV" ColumnName="MSGV" />
           <ScalarProperty Name="TietHoc" ColumnName="TietHoc" />
           <ScalarProperty Name="Phong" ColumnName="Phong" />
+          <ScalarProperty Name="TrangThaiLop" ColumnName="TrangThaiLop" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LopSinhVien">
-      <EntityTypeMapping TypeName="QLTVModel.LopSinhVien">
+      <EntityTypeMapping TypeName="QLTV2Model.LopSinhVien">
         <MappingFragment StoreEntitySet="LopSinhVien">
           <ScalarProperty Name="LopSinhVienID" ColumnName="LopSinhVienID" />
           <ScalarProperty Name="ClassID" ColumnName="ClassID" />
@@ -70,7 +73,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PhanHoi">
-      <EntityTypeMapping TypeName="QLTVModel.PhanHoi">
+      <EntityTypeMapping TypeName="QLTV2Model.PhanHoi">
         <MappingFragment StoreEntitySet="PhanHoi">
           <ScalarProperty Name="PhanHoiID" ColumnName="PhanHoiID" />
           <ScalarProperty Name="MSSV" ColumnName="MSSV" />
@@ -81,7 +84,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RolePermission">
-      <EntityTypeMapping TypeName="QLTVModel.RolePermission">
+      <EntityTypeMapping TypeName="QLTV2Model.RolePermission">
         <MappingFragment StoreEntitySet="RolePermission">
           <ScalarProperty Name="RolePermissionID" ColumnName="RolePermissionID" />
           <ScalarProperty Name="Vaitro" ColumnName="Vaitro" />
@@ -90,7 +93,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SinhVien">
-      <EntityTypeMapping TypeName="QLTVModel.SinhVien">
+      <EntityTypeMapping TypeName="QLTV2Model.SinhVien">
         <MappingFragment StoreEntitySet="SinhVien">
           <ScalarProperty Name="MSSV" ColumnName="MSSV" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
@@ -99,12 +102,12 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="TrangThaiSV" ColumnName="TrangThaiSV" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ThamGia">
-      <EntityTypeMapping TypeName="QLTVModel.ThamGia">
+      <EntityTypeMapping TypeName="QLTV2Model.ThamGia">
         <MappingFragment StoreEntitySet="ThamGia">
           <ScalarProperty Name="HoatDongID" ColumnName="HoatDongID" />
           <ScalarProperty Name="MSSV" ColumnName="MSSV" />
@@ -113,7 +116,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ThanhToan">
-      <EntityTypeMapping TypeName="QLTVModel.ThanhToan">
+      <EntityTypeMapping TypeName="QLTV2Model.ThanhToan">
         <MappingFragment StoreEntitySet="ThanhToan">
           <ScalarProperty Name="ThanhToanID" ColumnName="ThanhToanID" />
           <ScalarProperty Name="MSSV" ColumnName="MSSV" />
@@ -125,7 +128,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ThongBao">
-      <EntityTypeMapping TypeName="QLTVModel.ThongBao">
+      <EntityTypeMapping TypeName="QLTV2Model.ThongBao">
         <MappingFragment StoreEntitySet="ThongBao">
           <ScalarProperty Name="ThongBaoID" ColumnName="ThongBaoID" />
           <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
@@ -136,7 +139,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UserAccount">
-      <EntityTypeMapping TypeName="QLTVModel.UserAccount">
+      <EntityTypeMapping TypeName="QLTV2Model.UserAccount">
         <MappingFragment StoreEntitySet="UserAccount">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="Username" ColumnName="Username" />
@@ -145,6 +148,18 @@
           <ScalarProperty Name="MSSV" ColumnName="MSSV" />
           <ScalarProperty Name="MSGV" ColumnName="MSGV" />
           <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViPham">
+      <EntityTypeMapping TypeName="QLTV2Model.ViPham">
+        <MappingFragment StoreEntitySet="ViPham">
+          <ScalarProperty Name="ViPhamID" ColumnName="ViPhamID" />
+          <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+          <ScalarProperty Name="NgayViPham" ColumnName="NgayViPham" />
+          <ScalarProperty Name="HinhThucXuLy" ColumnName="HinhThucXuLy" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

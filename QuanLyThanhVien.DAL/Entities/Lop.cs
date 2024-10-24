@@ -24,17 +24,17 @@ namespace QuanLyThanhVien.DAL.Entities
             this.ThongBao = new HashSet<ThongBao>();
         }
     
-        public int ClassID { get; set; }
+        public string ClassID { get; set; }
         public string TenLop { get; set; }
         public string MSGV { get; set; }
         public string TietHoc { get; set; }
         public string Phong { get; set; }
+        public bool TrangThaiLop { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diem> Diem { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DiemDanh> DiemDanh { get; set; }
-        public virtual GiaoVien GiaoVien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoatDong> HoatDong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

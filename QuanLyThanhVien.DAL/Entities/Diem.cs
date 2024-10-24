@@ -16,9 +16,10 @@ namespace QuanLyThanhVien.DAL.Entities
     {
         public int DiemID { get; set; }
         public string MSSV { get; set; }
-        public int ClassID { get; set; }
-        public string MonHoc { get; set; }
-        public double Diem1 { get; set; }
+        public string ClassID { get; set; }
+        public double DiemCK { get; set; }
+        public double DiemGK { get; set; }
+        public double DiemQT { get; set; }
     
         public virtual Lop Lop { get; set; }
         public virtual SinhVien SinhVien { get; set; }

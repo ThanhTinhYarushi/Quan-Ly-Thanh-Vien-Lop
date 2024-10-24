@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyThanhVien.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace QuanLyThanhVien.GUI.Students.GUI
         public frmThongTinCaNhanSinhVien()
         {
             InitializeComponent();
+            txtHoTen.Text = SinhVienInstance.sv.HoTen;
         }
 
         

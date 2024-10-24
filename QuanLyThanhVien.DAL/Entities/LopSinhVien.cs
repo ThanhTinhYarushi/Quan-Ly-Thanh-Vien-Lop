@@ -15,7 +15,7 @@ namespace QuanLyThanhVien.DAL.Entities
     public partial class LopSinhVien
     {
         public int LopSinhVienID { get; set; }
-        public int ClassID { get; set; }
+        public string ClassID { get; set; }
         public string MSSV { get; set; }
     
         public virtual Lop Lop { get; set; }

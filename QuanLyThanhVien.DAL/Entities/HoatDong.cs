@@ -27,7 +27,7 @@ namespace QuanLyThanhVien.DAL.Entities
         public System.DateTime NgayThucHien { get; set; }
         public System.TimeSpan ThoiGian { get; set; }
         public string DiaDiem { get; set; }
-        public Nullable<int> ClassID { get; set; }
+        public string ClassID { get; set; }
         public string MSGV { get; set; }
     
         public virtual GiaoVien GiaoVien { get; set; }

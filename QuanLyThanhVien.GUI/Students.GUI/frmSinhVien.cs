@@ -53,5 +53,45 @@ namespace QuanLyThanhVien.GUI.Students.GUI
         {
 
         }
+
+        private void thamGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmHoatDong")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmHoatDong frmNV = new frmHoatDong();
+            frmNV.MdiParent = this;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmThongTinCaNhanSinhVien")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmThongTinCaNhanSinhVien frmNV = new frmThongTinCaNhanSinhVien();
+            frmNV.MdiParent = this;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
     }
 }

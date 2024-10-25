@@ -107,6 +107,9 @@
     <Compile Include="Entities\UserAccount.cs">
       <DependentUpon>QLTV.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ViPham.cs">
+      <DependentUpon>QLTV.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

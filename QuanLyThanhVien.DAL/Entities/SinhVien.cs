@@ -24,6 +24,7 @@ namespace QuanLyThanhVien.DAL.Entities
             this.ThamGia = new HashSet<ThamGia>();
             this.ThanhToan = new HashSet<ThanhToan>();
             this.UserAccount = new HashSet<UserAccount>();
+            this.ViPham = new HashSet<ViPham>();
         }
     
         public string MSSV { get; set; }
@@ -33,7 +34,7 @@ namespace QuanLyThanhVien.DAL.Entities
         public string Email { get; set; }
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
-        public Nullable<int> ClassID { get; set; }
+        public bool TrangThaiSV { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Diem> Diem { get; set; }
@@ -49,5 +50,7 @@ namespace QuanLyThanhVien.DAL.Entities
         public virtual ICollection<ThanhToan> ThanhToan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserAccount> UserAccount { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ViPham> ViPham { get; set; }
     }
 }

@@ -17,9 +17,8 @@ namespace QuanLyThanhVien.DAL.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GiaoVien()
         {
-            this.UserAccount = new HashSet<UserAccount>();
             this.HoatDong = new HashSet<HoatDong>();
-            this.Lop = new HashSet<Lop>();
+            this.UserAccount = new HashSet<UserAccount>();
         }
     
         public string MSGV { get; set; }
@@ -28,12 +27,11 @@ namespace QuanLyThanhVien.DAL.Entities
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
         public System.DateTime NgaySinh { get; set; }
+        public bool TrangThaiGV { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserAccount> UserAccount { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoatDong> HoatDong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lop> Lop { get; set; }
+        public virtual ICollection<UserAccount> UserAccount { get; set; }
     }
 }

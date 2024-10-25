@@ -12,15 +12,15 @@ namespace QuanLyThanhVien.DAL.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class DiemDanh
+    public partial class ViPham
     {
-        public int DiemDanhID { get; set; }
+        public int ViPhamID { get; set; }
         public string MSSV { get; set; }
-        public string ClassID { get; set; }
-        public System.DateTime NgayDiemDanh { get; set; }
-        public string TrangThai { get; set; }
+        public string NoiDung { get; set; }
+        public System.DateTime NgayViPham { get; set; }
+        public string HinhThucXuLy { get; set; }
+        public string GhiChu { get; set; }
     
-        public virtual Lop Lop { get; set; }
         public virtual SinhVien SinhVien { get; set; }
     }
 }

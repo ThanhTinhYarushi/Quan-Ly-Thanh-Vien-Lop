@@ -18,7 +18,7 @@ namespace QuanLyThanhVien.DAL.Entities
         public string TieuDe { get; set; }
         public string NoiDung { get; set; }
         public System.DateTime NgayTao { get; set; }
-        public Nullable<int> ClassID { get; set; }
+        public string ClassID { get; set; }
     
         public virtual Lop Lop { get; set; }
     }

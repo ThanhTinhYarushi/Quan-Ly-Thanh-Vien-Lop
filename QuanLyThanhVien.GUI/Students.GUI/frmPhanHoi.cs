@@ -21,5 +21,10 @@ namespace QuanLyThanhVien.GUI.Students.GUI
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

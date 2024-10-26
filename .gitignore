@@ -1,0 +1,34 @@
+# Bỏ qua thư mục .vs
+.vs/
+
+# Bỏ qua tất cả các file trong thư mục bin và obj
+**/bin/
+**/obj/
+
+# Bỏ qua các file tạm thời của Visual Studio
+*.suo
+*.user
+*.cache
+
+# Bỏ qua các file đầu ra debug
+*.exe
+*.dll
+*.pdb
+*.log
+*.mdb
+*.sln.docstates
+
+# Bỏ qua các file cấu hình tự động
+*.csproj.AssemblyReference.cache
+*.csproj.CoreCompileInputs.cache
+*.csproj.GenerateResource.cache
+DesignTimeResolveAssemblyReferencesInput.cache
+DocumentLayout.json
+DocumentLayout.backup.json
+
+# Bỏ qua file Backup
+*.bak
+*.tmp
+
+# Bỏ qua các file dữ liệu tạm thời
+Thumbs.db

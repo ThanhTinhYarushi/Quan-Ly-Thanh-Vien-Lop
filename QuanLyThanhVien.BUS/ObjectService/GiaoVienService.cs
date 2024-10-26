@@ -15,6 +15,28 @@ namespace QuanLyThanhVien.BUS
 
         // hàm lấy toàn bộ thông báo giáo viên tạo 
 
+        // hàm cập nhật thông tin cá nhân giảng viên truyền vào các thông tin
+        public bool updateGV(string hoten, string email, string sdt, string diachi, DateTime ngaySinh)
+        {
+            if (hoten != null || email != null || sdt != null || diachi != null || ngaySinh != null)
+            {
+                string mssv = GiaoVienInstance.gv.MSGV;
+                GiaoVien a = new GiaoVien()
+                {
+                    MSGV = mssv,
+                    HoTen = hoten,
+                    Email = email,
+                    SoDienThoai = sdt,
+                    DiaChi = diachi,
+                    NgaySinh = ngaySinh
+                };
+                db.GiaoVien.AddOrUpdate(a);
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
+        }
+
         public List<ThongBao> GetThongBaos()
         {
             return db.ThongBao

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices.ComTypes;
@@ -22,6 +23,26 @@ namespace QuanLyThanhVien.BUS
          * txtEmail.text =  SInhVienInstance.sv.MSSV;
         */
         // Get điểm của sinh viên trả về một list điểm các môn học sinh viên có tham gia(from Diem)
+        public bool updateSV(string hoten, string email, string sdt, string diachi, DateTime ngaySinh)
+        {
+            if (hoten != null || email != null || sdt != null || diachi != null || ngaySinh != null)
+            {
+                string mssv = SinhVienInstance.sv.MSSV;
+                SinhVien a = new SinhVien()
+                {
+                    MSSV = mssv,
+                    HoTen = hoten,
+                    Email = email,
+                    SoDienThoai = sdt,
+                    DiaChi = diachi,
+                    NgaySinh = ngaySinh
+                };
+                db.SinhVien.AddOrUpdate(a);
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
+        }
         public List<Diem> GetDiems()
         {
             return db.Diem.Where(p=>p.MSSV == SinhVienInstance.sv.MSSV ).ToList();

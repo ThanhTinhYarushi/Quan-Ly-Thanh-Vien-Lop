@@ -64,7 +64,7 @@ namespace QuanLyThanhVien.BUS
             if (msgv == db.Lop.FirstOrDefault(p => p.ClassID == classID).MSGV)
             {
                 ThongBao tb = new ThongBao() { TieuDe = tieuDe, NoiDung = NoiDung, NgayTao = ngayTao, ClassID = classID };
-                db.ThongBao.Add(tb);
+                db.ThongBao.AddOrUpdate(tb);
                 db.SaveChanges();
                 return true;
             }
@@ -160,10 +160,25 @@ namespace QuanLyThanhVien.BUS
             .ToList();
         }
 
-
-
-
-
-
+        public bool updateGV(string hoten, string email, string sdt, string diachi, DateTime ngaySinh)
+        {
+            if (hoten != null || email != null || sdt != null || diachi != null || ngaySinh != null)
+            {
+                string mssv = GiaoVienInstance.gv.MSGV;
+                GiaoVien a = new GiaoVien()
+                {
+                    MSGV = mssv,
+                    HoTen = hoten,
+                    Email = email,
+                    SoDienThoai = sdt,
+                    DiaChi = diachi,
+                    NgaySinh = ngaySinh
+                };
+                db.GiaoVien.AddOrUpdate(a);
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace QuanLyThanhVien.BUS
     {
         public static SinhVien sv;
 
+
         public static void getSinhVien(string mssv)
         {
             QLTV2Entities qLTVEntities1 = new QLTV2Entities();

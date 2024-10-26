@@ -27,6 +27,7 @@ namespace QuanLyThanhVien.GUI
         {
             string tk = txtUsername.Text;
             string mk = txtPassword.Text;
+
             if (tk == "" || mk == "")
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin");
@@ -54,6 +55,7 @@ namespace QuanLyThanhVien.GUI
 
                     // Đóng form đăng nhập
                     this.Hide();
+
                 }
                 else
                 {
@@ -62,5 +64,19 @@ namespace QuanLyThanhVien.GUI
             }
        
         }
+
+        private void frmLogIn_Load(object sender, EventArgs e)
+        {
+            txtUsername.Text = "gv01";
+            txtPassword.Text = "1";
+        }
+
+        //private void frmLogIn_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        btnLogin_Click(sender, e);
+        //    }
+        //}
     }
 }

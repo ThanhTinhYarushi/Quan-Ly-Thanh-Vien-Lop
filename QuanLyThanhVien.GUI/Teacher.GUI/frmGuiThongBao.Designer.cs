@@ -218,6 +218,7 @@
             this.dgv_ThongBao.Name = "dgv_ThongBao";
             this.dgv_ThongBao.Size = new System.Drawing.Size(756, 300);
             this.dgv_ThongBao.TabIndex = 0;
+            this.dgv_ThongBao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ThongBao_CellClick);
             // 
             // Column1
             // 
@@ -305,6 +306,7 @@
             this.btn_Them.TabIndex = 9;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Sua
             // 
@@ -332,6 +334,7 @@
             this.btn_Tim.TabIndex = 12;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // textBox5
             // 
@@ -370,6 +373,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGuiThongBao";
             this.Text = "frmGuiThongBao";
+            this.Load += new System.EventHandler(this.frmGuiThongBao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

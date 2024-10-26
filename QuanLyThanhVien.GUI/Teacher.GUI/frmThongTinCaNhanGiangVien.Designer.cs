@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(303, 106);
+            this.groupBox1.Location = new System.Drawing.Point(412, 153);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(601, 283);
             this.groupBox1.TabIndex = 0;
@@ -169,7 +169,7 @@
             // 
             // picbox_AnhDaiDien
             // 
-            this.picbox_AnhDaiDien.Location = new System.Drawing.Point(12, 107);
+            this.picbox_AnhDaiDien.Location = new System.Drawing.Point(121, 154);
             this.picbox_AnhDaiDien.Name = "picbox_AnhDaiDien";
             this.picbox_AnhDaiDien.Size = new System.Drawing.Size(285, 282);
             this.picbox_AnhDaiDien.TabIndex = 1;
@@ -177,16 +177,17 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(794, 395);
+            this.btn_Sua.Location = new System.Drawing.Point(903, 442);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(110, 23);
             this.btn_Sua.TabIndex = 3;
             this.btn_Sua.Text = "Sửa Thông Tin";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_CapNhatAnhDaiDien
             // 
-            this.btn_CapNhatAnhDaiDien.Location = new System.Drawing.Point(12, 395);
+            this.btn_CapNhatAnhDaiDien.Location = new System.Drawing.Point(121, 442);
             this.btn_CapNhatAnhDaiDien.Name = "btn_CapNhatAnhDaiDien";
             this.btn_CapNhatAnhDaiDien.Size = new System.Drawing.Size(289, 23);
             this.btn_CapNhatAnhDaiDien.TabIndex = 4;
@@ -198,7 +199,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Location = new System.Drawing.Point(222, 27);
+            this.label7.Location = new System.Drawing.Point(331, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(490, 55);
             this.label7.TabIndex = 5;
@@ -208,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 447);
+            this.ClientSize = new System.Drawing.Size(1182, 648);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_CapNhatAnhDaiDien);
             this.Controls.Add(this.btn_Sua);

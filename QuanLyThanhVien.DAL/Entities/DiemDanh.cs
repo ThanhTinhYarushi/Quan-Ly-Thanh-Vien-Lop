@@ -16,7 +16,7 @@ namespace QuanLyThanhVien.DAL.Entities
     {
         public int DiemDanhID { get; set; }
         public string MSSV { get; set; }
-        public int ClassID { get; set; }
+        public string ClassID { get; set; }
         public System.DateTime NgayDiemDanh { get; set; }
         public string TrangThai { get; set; }
     

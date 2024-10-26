@@ -27,6 +27,7 @@ namespace QuanLyThanhVien.DAL.Entities
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
         public System.DateTime NgaySinh { get; set; }
+        public bool TrangThaiGV { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoatDong> HoatDong { get; set; }

@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnTai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_avatar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -214,9 +216,29 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Ảnh Đại Diện";
             // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Location = new System.Drawing.Point(465, 414);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
+            this.btnCapNhat.TabIndex = 4;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            // 
+            // btnTai
+            // 
+            this.btnTai.Location = new System.Drawing.Point(57, 414);
+            this.btnTai.Name = "btnTai";
+            this.btnTai.Size = new System.Drawing.Size(75, 23);
+            this.btnTai.TabIndex = 4;
+            this.btnTai.Text = "Tải ảnh lên";
+            this.btnTai.UseVisualStyleBackColor = true;
+            // 
             // frmThongTinCaNhanSinhVien
             // 
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.btnTai);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -253,6 +275,8 @@
         private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Button btnTai;
         //private System.Windows.Forms.Button btnCapNhat;
         //private System.Windows.Forms.Button btnHuy;
     }

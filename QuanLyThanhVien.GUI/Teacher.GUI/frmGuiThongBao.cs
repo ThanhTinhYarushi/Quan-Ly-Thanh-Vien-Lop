@@ -89,7 +89,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
                 if (row.Cells[4].Value != null)
                 {
-                    cbo_MaLop.SelectedValue = row.Cells[4].Value.ToString();
+                    cbo_MaLop.SelectedItem = row.Cells[4].Value;
                 }
                 txt_TenLop.Text = row.Cells[5].Value.ToString();
             }

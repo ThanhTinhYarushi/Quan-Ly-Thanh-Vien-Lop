@@ -89,7 +89,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
                 if (row.Cells[4].Value != null)
                 {
-                    cbo_MaLop.SelectedItem = row.Cells[4].Value;
+                    cbo_MaLop.SelectedValue = row.Cells[4].Value.ToString();
                 }
                 txt_TenLop.Text = row.Cells[5].Value.ToString();
             }
@@ -135,7 +135,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            bool x = gvS.UpdateThongBao(txt_MaThongBao.Text, txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
+            bool x = gvS.UpdateThongBao(txt_MaThongBao.Text,txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
             if (x)
             {
                 MessageBox.Show("Sửa Thành Công", "Thông Báo");
@@ -145,6 +145,11 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             {
                 MessageBox.Show("Sửa Thất Bại", "Thông Báo");
             }
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

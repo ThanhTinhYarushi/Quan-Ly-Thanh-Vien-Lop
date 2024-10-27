@@ -156,6 +156,9 @@ namespace QuanLyThanhVien.BUS
         {
             return db.HoatDong.Where(p=>p.MSGV == GiaoVienInstance.gv.MSGV).ToList();
         }
+
+
+
         public bool CreateHoatDong(string tieuDe,string moTa,DateTime ngayThucHien,TimeSpan thoiGian,string diaDiem,string classID)
         {
             string msgv = GiaoVienInstance.gv.MSGV;
@@ -198,5 +201,44 @@ namespace QuanLyThanhVien.BUS
             .Contains(sv.MSSV))
             .ToList();
         }
+        public bool DiemDanhSinhVien(string mssv,string classid,DateTime ngaydiemdanh,string trangthai)
+        {
+            if (mssv!=""||classid!=""||ngaydiemdanh!=null||trangthai!="")
+            {
+                string TrangThai;
+                if (trangthai == "X")
+                {
+                    TrangThai = "Có mặt";
+                }
+                else if (trangthai == "T")
+                {
+                    TrangThai = "Trễ";
+                }
+                else
+                {
+                    TrangThai = "Vắng";
+                }
+                DiemDanh diemDanh = new DiemDanh()
+                {
+                    MSSV = mssv,
+                    ClassID = classid,
+                    NgayDiemDanh = ngaydiemdanh,
+                    TrangThai= TrangThai,
+                };
+                db.DiemDanh.Add(diemDanh);
+                db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+
+
+
     }
 }

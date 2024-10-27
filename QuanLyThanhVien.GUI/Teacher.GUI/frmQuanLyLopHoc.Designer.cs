@@ -38,6 +38,7 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txt_SoDienThoai = new System.Windows.Forms.TextBox();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
@@ -51,8 +52,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_HuyDay = new System.Windows.Forms.Button();
-            this.btn_XemLop = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txt_TenLop = new System.Windows.Forms.TextBox();
             this.txt_MaLop = new System.Windows.Forms.TextBox();
@@ -72,7 +71,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_XemDanhSachThamGia = new System.Windows.Forms.Button();
             this.btn_XemBangDiem = new System.Windows.Forms.Button();
-            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SV)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -167,52 +165,59 @@
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 326);
+            this.groupBox4.Location = new System.Drawing.Point(12, 293);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(352, 266);
+            this.groupBox4.Size = new System.Drawing.Size(352, 297);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông Tin Sinh Viên";
             // 
+            // txt_GioiTinh
+            // 
+            this.txt_GioiTinh.Location = new System.Drawing.Point(127, 134);
+            this.txt_GioiTinh.Name = "txt_GioiTinh";
+            this.txt_GioiTinh.Size = new System.Drawing.Size(100, 26);
+            this.txt_GioiTinh.TabIndex = 16;
+            // 
             // dtp_NgaySinh
             // 
             this.dtp_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_NgaySinh.Location = new System.Drawing.Point(127, 91);
+            this.dtp_NgaySinh.Location = new System.Drawing.Point(127, 99);
             this.dtp_NgaySinh.Name = "dtp_NgaySinh";
             this.dtp_NgaySinh.Size = new System.Drawing.Size(140, 26);
             this.dtp_NgaySinh.TabIndex = 15;
             // 
             // txt_SoDienThoai
             // 
-            this.txt_SoDienThoai.Location = new System.Drawing.Point(127, 219);
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(127, 227);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
             this.txt_SoDienThoai.Size = new System.Drawing.Size(219, 26);
             this.txt_SoDienThoai.TabIndex = 14;
             // 
             // txt_DiaChi
             // 
-            this.txt_DiaChi.Location = new System.Drawing.Point(127, 189);
+            this.txt_DiaChi.Location = new System.Drawing.Point(127, 197);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(219, 26);
             this.txt_DiaChi.TabIndex = 13;
             // 
             // txt_Email
             // 
-            this.txt_Email.Location = new System.Drawing.Point(127, 157);
+            this.txt_Email.Location = new System.Drawing.Point(127, 165);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(219, 26);
             this.txt_Email.TabIndex = 12;
             // 
             // txt_TenSinhVien
             // 
-            this.txt_TenSinhVien.Location = new System.Drawing.Point(127, 57);
+            this.txt_TenSinhVien.Location = new System.Drawing.Point(127, 65);
             this.txt_TenSinhVien.Name = "txt_TenSinhVien";
             this.txt_TenSinhVien.Size = new System.Drawing.Size(219, 26);
             this.txt_TenSinhVien.TabIndex = 11;
             // 
             // txt_MaSinhVien
             // 
-            this.txt_MaSinhVien.Location = new System.Drawing.Point(127, 25);
+            this.txt_MaSinhVien.Location = new System.Drawing.Point(127, 33);
             this.txt_MaSinhVien.Name = "txt_MaSinhVien";
             this.txt_MaSinhVien.Size = new System.Drawing.Size(219, 26);
             this.txt_MaSinhVien.TabIndex = 10;
@@ -220,7 +225,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 225);
+            this.label10.Location = new System.Drawing.Point(9, 233);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 20);
             this.label10.TabIndex = 9;
@@ -229,7 +234,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(37, 97);
+            this.label9.Location = new System.Drawing.Point(37, 105);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 20);
             this.label9.TabIndex = 8;
@@ -238,7 +243,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(58, 192);
+            this.label8.Location = new System.Drawing.Point(58, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 20);
             this.label8.TabIndex = 7;
@@ -247,7 +252,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(70, 163);
+            this.label7.Location = new System.Drawing.Point(70, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 6;
@@ -256,7 +261,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 126);
+            this.label6.Location = new System.Drawing.Point(47, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 5;
@@ -265,7 +270,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 63);
+            this.label5.Location = new System.Drawing.Point(13, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 20);
             this.label5.TabIndex = 4;
@@ -274,29 +279,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 31);
+            this.label4.Location = new System.Drawing.Point(18, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Mã Sinh Viên";
-            // 
-            // btn_HuyDay
-            // 
-            this.btn_HuyDay.Location = new System.Drawing.Point(261, 277);
-            this.btn_HuyDay.Name = "btn_HuyDay";
-            this.btn_HuyDay.Size = new System.Drawing.Size(103, 43);
-            this.btn_HuyDay.TabIndex = 29;
-            this.btn_HuyDay.Text = "Huỷ Dạy";
-            this.btn_HuyDay.UseVisualStyleBackColor = true;
-            // 
-            // btn_XemLop
-            // 
-            this.btn_XemLop.Location = new System.Drawing.Point(152, 277);
-            this.btn_XemLop.Name = "btn_XemLop";
-            this.btn_XemLop.Size = new System.Drawing.Size(103, 43);
-            this.btn_XemLop.TabIndex = 28;
-            this.btn_XemLop.Text = "Xem";
-            this.btn_XemLop.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -390,6 +377,7 @@
             this.btn_TaoMoi.TabIndex = 33;
             this.btn_TaoMoi.Text = "Tạo Mới";
             this.btn_TaoMoi.UseVisualStyleBackColor = true;
+            this.btn_TaoMoi.Click += new System.EventHandler(this.btn_TaoMoi_Click);
             // 
             // groupBox1
             // 
@@ -468,13 +456,6 @@
             this.btn_XemBangDiem.UseVisualStyleBackColor = true;
             this.btn_XemBangDiem.Click += new System.EventHandler(this.btn_XemBangDiem_Click);
             // 
-            // txt_GioiTinh
-            // 
-            this.txt_GioiTinh.Location = new System.Drawing.Point(127, 126);
-            this.txt_GioiTinh.Name = "txt_GioiTinh";
-            this.txt_GioiTinh.Size = new System.Drawing.Size(100, 26);
-            this.txt_GioiTinh.TabIndex = 16;
-            // 
             // frmQuanLyLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,9 +470,7 @@
             this.Controls.Add(this.btn_Tim);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.txt_Tim);
-            this.Controls.Add(this.btn_HuyDay);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btn_XemLop);
             this.Name = "frmQuanLyLopHoc";
             this.Text = "frmQuanLyLopHoc";
             this.Load += new System.EventHandler(this.frmQuanLyLopHoc_Load);
@@ -511,8 +490,6 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btn_HuyDay;
-        private System.Windows.Forms.Button btn_XemLop;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txt_TenLop;
         private System.Windows.Forms.TextBox txt_MaLop;

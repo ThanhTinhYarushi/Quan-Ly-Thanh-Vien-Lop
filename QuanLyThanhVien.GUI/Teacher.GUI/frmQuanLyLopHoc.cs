@@ -27,8 +27,8 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         }
         private void btn_XemBangDiem_Click(object sender, EventArgs e)
         {
-            
-            
+            frmNhapVaQuanLyDiem frm = new frmNhapVaQuanLyDiem();
+            frm.ShowDialog();
         }
 
         private void frmQuanLyLopHoc_Load(object sender, EventArgs e)
@@ -77,8 +77,6 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void dataGridView_SV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = dataGridView_SV.Rows[e.RowIndex];
@@ -95,7 +93,6 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
                     txt_SoDienThoai.Text = row.Cells[5].Value.ToString();
                     txt_DiaChi.Text = row.Cells[6].Value.ToString();
                 }
-            }
         }
 
         private void CamSua()
@@ -104,7 +101,6 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             txt_TenLop.ReadOnly = true;
             txt_MaSinhVien.ReadOnly = true;
             txt_TenSinhVien.ReadOnly = true;
-            //dtp_NgaySinh.ShowUpDown = true;
             dtp_NgaySinh.Enabled = false;
             txt_GioiTinh.ReadOnly = true;
             txt_Email.ReadOnly = true;
@@ -123,10 +119,37 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Tim_Click(object sender, EventArgs e)
         {
-            string tim = txt_Tim.Text.Trim();
-            // anh thanh oi em ko biet lam
+            string tim = txt_Tim.Text.Trim().ToLower();
+            // Duyet cac dgv de tim lop
+            foreach (DataGridViewRow row in dataGridView_Lop.Rows)
+            {
+                if(!row.IsNewRow)
+                {
+                    // neu loi null o cot dulieu, xai Value?
+                    string maLop = row.Cells[0].Value.ToString().ToLower();
+                    string tenLop = row.Cells[1].Value.ToString().ToLower();
+
+                    if(maLop != null && maLop.Contains(tim) || tenLop != null && tenLop.Contains(tim))
+                    {
+                        row.Visible = true;
+
+                        // hien thi sv thuoc lop do
+                        dataGridView_SV.Rows.Clear();
+                        fill_dgv_SV(maLop);
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
         }
 
-
+        private void btn_TaoMoi_Click(object sender, EventArgs e)
+        {
+            dataGridView_Lop.Rows.Clear();
+            dataGridView_SV.Rows.Clear();
+            fill_dgv_Lop();
+        }
     }
 }

@@ -122,7 +122,15 @@ namespace QuanLyThanhVien.BUS
 
             
         }
-
+        public List<PhanHoi> GetPhanHois()
+        {
+            return db.PhanHoi.Where(p=>p.MSSV==SinhVienInstance.sv.MSSV).ToList();
+        }
+        // laay
+        public string getTenLop(string classid)
+        {
+            return db.Lop.FirstOrDefault(p=>p.ClassID==classid).TenLop;
+        }
         
 
 

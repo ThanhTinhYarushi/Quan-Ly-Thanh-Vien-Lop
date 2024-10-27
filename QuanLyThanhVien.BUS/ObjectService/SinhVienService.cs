@@ -131,7 +131,26 @@ namespace QuanLyThanhVien.BUS
         {
             return db.Lop.FirstOrDefault(p=>p.ClassID==classid).TenLop;
         }
-        
+        public bool guiPhanHoi(string mssv,string hoatdongid,string noidung,DateTime ngay)
+        {
+            if (mssv!=""||hoatdongid!=""||noidung!=""||ngay!=null)
+            {
+                PhanHoi ph = new PhanHoi()
+                {
+                    MSSV = mssv,
+                    HoatDongID=int.Parse(hoatdongid),
+                    NoiDung=noidung,
+                    NgayPhanHoi=ngay
+                };
+                db.PhanHoi.Add(ph);
+                db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
 

@@ -77,8 +77,6 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void dataGridView_SV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = dataGridView_SV.Rows[e.RowIndex];
@@ -95,7 +93,6 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
                     txt_SoDienThoai.Text = row.Cells[5].Value.ToString();
                     txt_DiaChi.Text = row.Cells[6].Value.ToString();
                 }
-            }
         }
 
         private void CamSua()

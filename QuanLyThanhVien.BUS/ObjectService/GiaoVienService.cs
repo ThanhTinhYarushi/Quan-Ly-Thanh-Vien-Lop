@@ -156,9 +156,6 @@ namespace QuanLyThanhVien.BUS
         {
             return db.HoatDong.Where(p=>p.MSGV == GiaoVienInstance.gv.MSGV).ToList();
         }
-
-
-
         public bool CreateHoatDong(string tieuDe,string moTa,DateTime ngayThucHien,TimeSpan thoiGian,string diaDiem,string classID)
         {
             string msgv = GiaoVienInstance.gv.MSGV;
@@ -201,11 +198,5 @@ namespace QuanLyThanhVien.BUS
             .Contains(sv.MSSV))
             .ToList();
         }
-
-
-
-
-
-
     }
 }

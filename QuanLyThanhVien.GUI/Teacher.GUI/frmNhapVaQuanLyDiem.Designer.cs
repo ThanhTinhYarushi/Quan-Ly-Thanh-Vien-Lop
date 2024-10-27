@@ -43,6 +43,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Diem = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_NhapHoacSua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,13 +76,6 @@
             this.btn_Huy = new System.Windows.Forms.Button();
             this.txt_Tim = new System.Windows.Forms.TextBox();
             this.btn_Tim = new System.Windows.Forms.Button();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Lop)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -224,6 +224,41 @@
             this.dataGridView_Diem.Name = "dataGridView_Diem";
             this.dataGridView_Diem.Size = new System.Drawing.Size(792, 268);
             this.dataGridView_Diem.TabIndex = 1;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Mã Sinh Viên";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Tên Sinh Viên";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Điểm Chuyên Cần";
+            this.Column8.Name = "Column8";
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Điểm Giữa Kì";
+            this.Column10.Name = "Column10";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "ĐIểm Quá Trình";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Điểm Cuối Kỳ";
+            this.Column13.Name = "Column13";
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Điểm Tổng Kết";
+            this.Column14.Name = "Column14";
             // 
             // btn_NhapHoacSua
             // 
@@ -461,41 +496,7 @@
             this.btn_Tim.TabIndex = 26;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Mã Sinh Viên";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Tên Sinh Viên";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Điểm Chuyên Cần";
-            this.Column8.Name = "Column8";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Điểm Giữa Kì";
-            this.Column10.Name = "Column10";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "ĐIểm Quá Trình";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Điểm Cuối Kỳ";
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Điểm Tổng Kết";
-            this.Column14.Name = "Column14";
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // frmNhapVaQuanLyDiem
             // 

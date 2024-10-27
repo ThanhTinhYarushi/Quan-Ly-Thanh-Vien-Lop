@@ -90,5 +90,11 @@ namespace QuanLyThanhVien.GUI
             }
        
         }
+
+        private void frmLogIn_Load(object sender, EventArgs e)
+        {
+            txtUsername.Text = "gv01";
+            txtPassword.Text = "1";
+        }
     }
 }

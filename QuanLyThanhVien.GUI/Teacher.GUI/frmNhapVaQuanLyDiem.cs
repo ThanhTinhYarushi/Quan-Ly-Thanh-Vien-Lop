@@ -50,5 +50,33 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             fill_dgv_Diem();
 
         }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            string tim = txt_Tim.Text.Trim().ToLower();
+            // Duyet cac dgv de tim lop
+            foreach (DataGridViewRow row in dataGridView_Lop.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    // neu loi null o cot dulieu, xai Value?
+                    string maLop = row.Cells[0].Value.ToString().ToLower();
+                    string tenLop = row.Cells[1].Value.ToString().ToLower();
+
+                    if (maLop != null && maLop.Contains(tim) || tenLop != null && tenLop.Contains(tim))
+                    {
+                        row.Visible = true;
+
+                        // hien thi sv thuoc lop do
+                        dataGridView_Diem.Rows.Clear();
+                        fill_dgv_Diem();
+                    }
+                    else
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+        }
     }
 }

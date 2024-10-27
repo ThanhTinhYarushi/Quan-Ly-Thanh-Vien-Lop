@@ -201,6 +201,39 @@ namespace QuanLyThanhVien.BUS
             .Contains(sv.MSSV))
             .ToList();
         }
+        public bool DiemDanhSinhVien(string mssv,string classid,DateTime ngaydiemdanh,string trangthai)
+        {
+            if (mssv!=""||classid!=""||ngaydiemdanh!=null||trangthai!="")
+            {
+                string TrangThai;
+                if (trangthai == "X")
+                {
+                    TrangThai = "Có mặt";
+                }
+                else if (trangthai == "T")
+                {
+                    TrangThai = "Trễ";
+                }
+                else
+                {
+                    TrangThai = "Vắng";
+                }
+                DiemDanh diemDanh = new DiemDanh()
+                {
+                    MSSV = mssv,
+                    ClassID = classid,
+                    NgayDiemDanh = ngaydiemdanh,
+                    TrangThai= TrangThai,
+                };
+                db.DiemDanh.Add(diemDanh);
+                db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
 

@@ -15,6 +15,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
     public partial class frmGuiThongBao : Form
     {
         private readonly GiaoVienService gvS = new GiaoVienService();
+        private Dictionary<string, string> classDictionary; // truy cuu ten lop dua tren ma lop -> cbo
         bool x;
         public frmGuiThongBao()
         {
@@ -60,7 +61,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            x = gvS.createAndUpdateThongBao(txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
+            bool x = gvS.createAndUpdateThongBao(txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
             if (x)
             {
                 MessageBox.Show("Thêm Thành Công", "Thông Báo");

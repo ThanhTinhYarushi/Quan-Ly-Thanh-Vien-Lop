@@ -60,7 +60,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            x = gvS.createAndUpdateThongBao(txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
+            x = gvS.createThongBao(txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
             if (x)
             {
                 MessageBox.Show("Thêm Thành Công", "Thông Báo");
@@ -135,7 +135,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            bool x = gvS.createAndUpdateThongBao(txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
+            bool x = gvS.UpdateThongBao(txt_MaThongBao.Text, txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, dtp_NgayTao.Value, cbo_MaLop.Text);
             if (x)
             {
                 MessageBox.Show("Sửa Thành Công", "Thông Báo");

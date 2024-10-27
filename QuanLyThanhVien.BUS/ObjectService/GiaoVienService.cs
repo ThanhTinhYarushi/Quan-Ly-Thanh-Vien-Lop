@@ -15,6 +15,28 @@ namespace QuanLyThanhVien.BUS
 
         // hàm lấy toàn bộ thông báo giáo viên tạo 
 
+        // hàm cập nhật thông tin cá nhân giảng viên truyền vào các thông tin
+        public bool updateGV(string hoten, string email, string sdt, string diachi, DateTime ngaySinh)
+        {
+            if (hoten != null || email != null || sdt != null || diachi != null || ngaySinh != null)
+            {
+                string mssv = GiaoVienInstance.gv.MSGV;
+                GiaoVien a = new GiaoVien()
+                {
+                    MSGV = mssv,
+                    HoTen = hoten,
+                    Email = email,
+                    SoDienThoai = sdt,
+                    DiaChi = diachi,
+                    NgaySinh = ngaySinh
+                };
+                db.GiaoVien.AddOrUpdate(a);
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
+        }
+
         public List<ThongBao> GetThongBaos()
         {
             return db.ThongBao
@@ -55,15 +77,32 @@ namespace QuanLyThanhVien.BUS
             }
         }
 
-        // Hàm tạo thông báo cho phép giảng viên gửi thông báo cho các lớp GV có Dạy
+        // Hàm cập nhật  thông báo cho phép giảng viên cập nhật lại các thônb báo đã  gửi 
 
-        public bool createAndUpdateThongBao(string tieuDe, string NoiDung, DateTime ngayTao, string classID)
+        public bool UpdateThongBao(string ma,string tieuDe, string NoiDung, DateTime ngayTao, string classID)
         {
             // Kiểm tra xem giảng viên có dạy lớp này ko
             string msgv = GiaoVienInstance.gv.MSGV;
             if (msgv == db.Lop.FirstOrDefault(p => p.ClassID == classID).MSGV)
             {
-                ThongBao tb = new ThongBao() { TieuDe = tieuDe, NoiDung = NoiDung, NgayTao = ngayTao, ClassID = classID };
+                ThongBao tb = new ThongBao() { ThongBaoID = int.Parse(ma) ,TieuDe = tieuDe, NoiDung = NoiDung, NgayTao = ngayTao, ClassID = classID };
+                db.ThongBao.AddOrUpdate(tb);
+                db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        // hàm tạo thông báo ko nhận vào mã thông báo
+        public bool createThongBao( string tieuDe, string NoiDung, DateTime ngayTao, string classID)
+        {
+            // Kiểm tra xem giảng viên có dạy lớp này ko
+            string msgv = GiaoVienInstance.gv.MSGV;
+            if (msgv == db.Lop.FirstOrDefault(p => p.ClassID == classID).MSGV)
+            {
+                ThongBao tb = new ThongBao() {  TieuDe = tieuDe, NoiDung = NoiDung, NgayTao = ngayTao, ClassID = classID };
                 db.ThongBao.AddOrUpdate(tb);
                 db.SaveChanges();
                 return true;
@@ -75,7 +114,8 @@ namespace QuanLyThanhVien.BUS
         }
         public bool deleteThongBao(string thongBaoID)
         {
-            ThongBao tb = db.ThongBao.FirstOrDefault(p => p.ThongBaoID == int.Parse(thongBaoID));
+            int thongbaoid = int.Parse(thongBaoID);
+            ThongBao tb = db.ThongBao.FirstOrDefault(p => p.ThongBaoID ==thongbaoid );
             if (tb != null)
             {
                 db.ThongBao.Remove(tb);
@@ -116,6 +156,8 @@ namespace QuanLyThanhVien.BUS
         {
             return db.HoatDong.Where(p=>p.MSGV == GiaoVienInstance.gv.MSGV).ToList();
         }
+
+
 
         public bool CreateHoatDong(string tieuDe,string moTa,DateTime ngayThucHien,TimeSpan thoiGian,string diaDiem,string classID)
         {
@@ -160,25 +202,10 @@ namespace QuanLyThanhVien.BUS
             .ToList();
         }
 
-        public bool updateGV(string hoten, string email, string sdt, string diachi, DateTime ngaySinh)
-        {
-            if (hoten != null || email != null || sdt != null || diachi != null || ngaySinh != null)
-            {
-                string mssv = GiaoVienInstance.gv.MSGV;
-                GiaoVien a = new GiaoVien()
-                {
-                    MSGV = mssv,
-                    HoTen = hoten,
-                    Email = email,
-                    SoDienThoai = sdt,
-                    DiaChi = diachi,
-                    NgaySinh = ngaySinh
-                };
-                db.GiaoVien.AddOrUpdate(a);
-                db.SaveChanges();
-                return true;
-            }
-            else { return false; }
-        }
+
+
+
+
+
     }
 }

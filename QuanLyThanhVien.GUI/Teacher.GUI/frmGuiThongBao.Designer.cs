@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbo_Lop = new System.Windows.Forms.ComboBox();
+            this.txt_TenLop = new System.Windows.Forms.TextBox();
             this.cbo_MaLop = new System.Windows.Forms.ComboBox();
             this.dtp_NgayTao = new System.Windows.Forms.DateTimePicker();
             this.rtb_txt_NoiDungThongBao = new System.Windows.Forms.RichTextBox();
@@ -49,10 +49,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_TieuDeMoi = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_rtb_NoiDungMoi = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Them = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
@@ -60,6 +56,7 @@
             this.btn_Tim = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongBao)).BeginInit();
@@ -67,7 +64,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbo_Lop);
+            this.groupBox1.Controls.Add(this.txt_TenLop);
             this.groupBox1.Controls.Add(this.cbo_MaLop);
             this.groupBox1.Controls.Add(this.dtp_NgayTao);
             this.groupBox1.Controls.Add(this.rtb_txt_NoiDungThongBao);
@@ -87,13 +84,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Thông Báo";
             // 
-            // cbo_Lop
+            // txt_TenLop
             // 
-            this.cbo_Lop.FormattingEnabled = true;
-            this.cbo_Lop.Location = new System.Drawing.Point(160, 402);
-            this.cbo_Lop.Name = "cbo_Lop";
-            this.cbo_Lop.Size = new System.Drawing.Size(157, 28);
-            this.cbo_Lop.TabIndex = 19;
+            this.txt_TenLop.Location = new System.Drawing.Point(160, 399);
+            this.txt_TenLop.Name = "txt_TenLop";
+            this.txt_TenLop.Size = new System.Drawing.Size(209, 26);
+            this.txt_TenLop.TabIndex = 19;
             // 
             // cbo_MaLop
             // 
@@ -199,7 +195,7 @@
             this.groupBox2.Controls.Add(this.dgv_ThongBao);
             this.groupBox2.Location = new System.Drawing.Point(393, 91);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(777, 341);
+            this.groupBox2.Size = new System.Drawing.Size(777, 545);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tất Cả Thông Báo";
@@ -216,7 +212,7 @@
             this.Column6});
             this.dgv_ThongBao.Location = new System.Drawing.Point(15, 19);
             this.dgv_ThongBao.Name = "dgv_ThongBao";
-            this.dgv_ThongBao.Size = new System.Drawing.Size(756, 300);
+            this.dgv_ThongBao.Size = new System.Drawing.Size(756, 517);
             this.dgv_ThongBao.TabIndex = 0;
             this.dgv_ThongBao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ThongBao_CellClick);
             // 
@@ -252,41 +248,6 @@
             this.Column6.HeaderText = "Lớp";
             this.Column6.Name = "Column6";
             // 
-            // txt_TieuDeMoi
-            // 
-            this.txt_TieuDeMoi.Location = new System.Drawing.Point(463, 435);
-            this.txt_TieuDeMoi.Name = "txt_TieuDeMoi";
-            this.txt_TieuDeMoi.Size = new System.Drawing.Size(353, 20);
-            this.txt_TieuDeMoi.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(393, 435);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tiêu Đề";
-            // 
-            // txt_rtb_NoiDungMoi
-            // 
-            this.txt_rtb_NoiDungMoi.Location = new System.Drawing.Point(463, 461);
-            this.txt_rtb_NoiDungMoi.Name = "txt_rtb_NoiDungMoi";
-            this.txt_rtb_NoiDungMoi.Size = new System.Drawing.Size(707, 175);
-            this.txt_rtb_NoiDungMoi.TabIndex = 6;
-            this.txt_rtb_NoiDungMoi.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(404, 459);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Mô Tả";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -316,6 +277,7 @@
             this.btn_Sua.TabIndex = 10;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -353,11 +315,22 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "Tìm Kiếm Thông Báo";
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Location = new System.Drawing.Point(1074, 52);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(96, 33);
+            this.btn_Refresh.TabIndex = 15;
+            this.btn_Refresh.Text = "Tạo Mới";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // frmGuiThongBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 648);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.btn_Tim);
@@ -365,10 +338,6 @@
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.btn_Them);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_rtb_NoiDungMoi);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_TieuDeMoi);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGuiThongBao";
@@ -387,10 +356,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_TieuDeMoi;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox txt_rtb_NoiDungMoi;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtb_txt_NoiDungThongBao;
         private System.Windows.Forms.TextBox txt_TieuDeThongBao;
@@ -408,7 +373,6 @@
         private System.Windows.Forms.Button btn_Tim;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbo_Lop;
         private System.Windows.Forms.ComboBox cbo_MaLop;
         private System.Windows.Forms.DataGridView dgv_ThongBao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -417,5 +381,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.TextBox txt_TenLop;
+        private System.Windows.Forms.Button btn_Refresh;
     }
 }

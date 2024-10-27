@@ -1,6 +1,4 @@
-﻿using QuanLyThanhVien.BUS;
-using QuanLyThanhVien.DAL.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +12,6 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 {
     public partial class frmThongBao : Form
     {
-        private readonly SinhVienService  ser= new SinhVienService();  
         public frmThongBao()
         {
             InitializeComponent();
@@ -28,14 +25,6 @@ namespace QuanLyThanhVien.GUI.Students.GUI
         private void txt_Tim_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void frmThongBao_Load(object sender, EventArgs e)
-        {
-            foreach (ThongBao item in ser.getThongBao())
-            {
-                dataGridView1.Rows.Add(item.TieuDe);
-            }
         }
     }
 }

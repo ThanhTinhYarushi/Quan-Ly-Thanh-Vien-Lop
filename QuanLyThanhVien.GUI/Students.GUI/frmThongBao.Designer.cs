@@ -42,10 +42,9 @@
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(1052, 125);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTim.Location = new System.Drawing.Point(701, 81);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(112, 35);
+            this.btnTim.Size = new System.Drawing.Size(75, 23);
             this.btnTim.TabIndex = 14;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
@@ -59,82 +58,66 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(33, 169);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 110);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1131, 505);
+            this.dataGridView1.Size = new System.Drawing.Size(754, 328);
             this.dataGridView1.TabIndex = 13;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã thông báo";
-            this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Tiêu đề";
-            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Nội dung";
-            this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Ngày tạo";
-            this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Mã lớp";
-            this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(450, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(300, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 58);
+            this.label2.Size = new System.Drawing.Size(180, 39);
             this.label2.TabIndex = 12;
             this.label2.Text = "Thông báo";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_Tim
             // 
-            this.txt_Tim.Location = new System.Drawing.Point(868, 129);
-            this.txt_Tim.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_Tim.Location = new System.Drawing.Point(579, 84);
             this.txt_Tim.Name = "txt_Tim";
-            this.txt_Tim.Size = new System.Drawing.Size(148, 26);
+            this.txt_Tim.Size = new System.Drawing.Size(100, 20);
             this.txt_Tim.TabIndex = 15;
             this.txt_Tim.TextChanged += new System.EventHandler(this.txt_Tim_TextChanged);
             // 
             // frmThongBao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_Tim);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmThongBao";
             this.Text = "frmThongBao";
-            this.Load += new System.EventHandler(this.frmThongBao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

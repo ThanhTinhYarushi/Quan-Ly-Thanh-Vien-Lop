@@ -22,6 +22,34 @@ namespace QuanLyThanhVien.GUI
         {
             InitializeComponent();
         }
+        
+
+        // Đăng ký sự kiện KeyDown cho txtSTK và txtPassword
+        private void txtSTK_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Chuyển focus sang TextBox mật khẩu
+                txtPassword.Focus();
+                e.Handled = true;
+                e.SuppressKeyPress = true; // Ngăn tiếng 'ding' khi nhấn Enter
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Gọi sự kiện đăng nhập khi nhấn Enter trong TextBox mật khẩu
+                btnLogin_Click(sender, e);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        // Sự kiện đăng nhập
+       
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {

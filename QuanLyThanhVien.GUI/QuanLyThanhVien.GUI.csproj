@@ -62,6 +62,48 @@
     <Compile Include="Admin.GUI\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin.GUI\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyHoatDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyHoatDong.Designer.cs">
+      <DependentUpon>frmQuanLyHoatDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyPhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyPhanHoi.Designer.cs">
+      <DependentUpon>frmQuanLyPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyThongBao.Designer.cs">
+      <DependentUpon>frmQuanLyThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemDiemDanhVaViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemDiemDanhVaViPham.Designer.cs">
+      <DependentUpon>frmXemDiemDanhVaViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemThongTinCaNhan.Designer.cs">
+      <DependentUpon>frmXemThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.GUI\frmDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +226,30 @@
     <Compile Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.Designer.cs">
       <DependentUpon>frmXemThongTinPhanHoiSinhVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin.GUI\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyHoatDong.resx">
+      <DependentUpon>frmQuanLyHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyPhanHoi.resx">
+      <DependentUpon>frmQuanLyPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyThongBao.resx">
+      <DependentUpon>frmQuanLyThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmXemDiemDanhVaViPham.resx">
+      <DependentUpon>frmXemDiemDanhVaViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmXemThongTinCaNhan.resx">
+      <DependentUpon>frmXemThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyLopHoc.resx">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmDiem.resx">
       <DependentUpon>frmDiem.cs</DependentUpon>
     </EmbeddedResource>

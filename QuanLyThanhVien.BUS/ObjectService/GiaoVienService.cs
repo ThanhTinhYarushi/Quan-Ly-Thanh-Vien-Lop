@@ -234,6 +234,18 @@ namespace QuanLyThanhVien.BUS
                 return false;
             }
         }
+        public Diem getDiemSV(string mssv,string classID)
+        {
+            Diem diem = db.Diem.FirstOrDefault(p => p.MSSV == mssv&&p.ClassID==classID);
+            if (diem==null)
+            {
+                return null;
+            }
+            else
+            {
+                return diem;
+            }
+        }
 
 
 

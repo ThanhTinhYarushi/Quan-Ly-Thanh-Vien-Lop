@@ -61,22 +61,29 @@ namespace QuanLyThanhVien.BUS
 
         }
         // Đăng kí  và hủy hoạt động nhận vào mssv , mã hoạt động (From Hoat Dong)
-        public void DangKyHoatDong(string mssv, string mhd)
+        public bool DangKyHoatDong(string mssv, string mhd)
         {
             if (mssv!=null && mhd != null)
             {
-                ThamGia tg = new ThamGia() { MSSV = mssv ,HoatDongID = int.Parse(mhd)};
-                db.ThamGia.Add(tg);
+                ThamGia tg = new ThamGia() { MSSV = mssv ,HoatDongID = int.Parse(mhd),TrangThai="DangKy"};
+                db.ThamGia.AddOrUpdate(tg);
                 db.SaveChanges();
-            }
+                return true;
+            }else { return false; }
         }
-        public void HuyDangKy(string mssv, string mhd)
+        public bool HuyDangKy(string mssv, string mhd)
         {
             if (mssv != null && mhd != null)
             {
-                ThamGia tg = new ThamGia() { MSSV = mssv, HoatDongID = int.Parse(mhd) };
+                int ma = int.Parse(mhd);
+                ThamGia tg = db.ThamGia.FirstOrDefault(p=>p.MSSV == mssv && p.HoatDongID == ma);
                 db.ThamGia.Remove(tg);
                 db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
         // hàm getLop trả về các lớp mà sinh viên có HỌC (From Thong tin lop hoc)
@@ -92,6 +99,19 @@ namespace QuanLyThanhVien.BUS
             .ToList();
 
         }
+        // Hàm trả về một giáo viên
+        public GiaoVien GetGiaoVien(string magv)
+        {
+            if (magv!="")
+            {
+                return db.GiaoVien.FirstOrDefault(p=>p.MSGV == magv);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         // Hàm getHDThamGia trả về các hoạt động sinh viên đã đăng kí tham gia (From Thamgia)
         public List<HoatDong> getHDThamGia()
         {
@@ -150,6 +170,10 @@ namespace QuanLyThanhVien.BUS
             {
                 return false;
             }
+        }
+        public string getTenHoatDong(int? maHD)
+        {
+            return db.HoatDong.FirstOrDefault(p=>p.HoatDongID==maHD).TieuDe;
         }
 
 

@@ -106,15 +106,16 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
                     flag = false;
                     flagname += row.Cells[1].Value.ToString()+" ";
                 }
-                if (flag == true)
-                {
-                    MessageBox.Show("diem danh thanh cong");
-                }
-                else
-                {
-                    MessageBox.Show("diem danh ko thanh ko\n",flagname);
-                    
-                }
+
+            }
+            if (flag == true)
+            {
+                MessageBox.Show("diem danh thanh cong");
+            }
+            else
+            {
+                MessageBox.Show("diem danh ko thanh ko\n", flagname);
+
             }
         }
 

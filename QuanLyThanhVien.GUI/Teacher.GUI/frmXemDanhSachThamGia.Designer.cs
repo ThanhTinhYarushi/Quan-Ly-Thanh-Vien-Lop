@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtp_ThoiGian = new System.Windows.Forms.DateTimePicker();
+            this.t_ThoiGian = new System.Windows.Forms.DateTimePicker();
             this.dtp_NgayThucHien = new System.Windows.Forms.DateTimePicker();
             this.txt_MaLopHoatDong = new System.Windows.Forms.TextBox();
             this.txt_DiaDiem = new System.Windows.Forms.TextBox();
@@ -45,19 +45,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView_DSHD = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView_HoatDong = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbo_GioiTinh = new System.Windows.Forms.ComboBox();
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txt_SoDienThoai = new System.Windows.Forms.TextBox();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
@@ -81,9 +79,10 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.txt_GioiTinh = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DSHD)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HoatDong)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SV)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -91,7 +90,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtp_ThoiGian);
+            this.groupBox1.Controls.Add(this.t_ThoiGian);
             this.groupBox1.Controls.Add(this.dtp_NgayThucHien);
             this.groupBox1.Controls.Add(this.txt_MaLopHoatDong);
             this.groupBox1.Controls.Add(this.txt_DiaDiem);
@@ -114,13 +113,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Hoạt Động";
             // 
-            // dtp_ThoiGian
+            // t_ThoiGian
             // 
-            this.dtp_ThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_ThoiGian.Location = new System.Drawing.Point(121, 275);
-            this.dtp_ThoiGian.Name = "dtp_ThoiGian";
-            this.dtp_ThoiGian.Size = new System.Drawing.Size(205, 20);
-            this.dtp_ThoiGian.TabIndex = 16;
+            this.t_ThoiGian.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.t_ThoiGian.Location = new System.Drawing.Point(121, 275);
+            this.t_ThoiGian.Name = "t_ThoiGian";
+            this.t_ThoiGian.Size = new System.Drawing.Size(205, 20);
+            this.t_ThoiGian.TabIndex = 16;
             // 
             // dtp_NgayThucHien
             // 
@@ -245,33 +244,37 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã Hoạt Động";
             // 
-            // dataGridView_DSHD
+            // groupBox2
             // 
-            this.dataGridView_DSHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_DSHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.groupBox2.Controls.Add(this.dataGridView_HoatDong);
+            this.groupBox2.Location = new System.Drawing.Point(362, 70);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(839, 326);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh Sách Hoạt Động";
+            // 
+            // dataGridView_HoatDong
+            // 
+            this.dataGridView_HoatDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_HoatDong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView_DSHD.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView_DSHD.Name = "dataGridView_DSHD";
-            this.dataGridView_DSHD.Size = new System.Drawing.Size(833, 291);
-            this.dataGridView_DSHD.TabIndex = 3;
-            this.dataGridView_DSHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_DSHD_CellContentClick);
+            this.dataGridView_HoatDong.Location = new System.Drawing.Point(12, 22);
+            this.dataGridView_HoatDong.Name = "dataGridView_HoatDong";
+            this.dataGridView_HoatDong.Size = new System.Drawing.Size(821, 298);
+            this.dataGridView_HoatDong.TabIndex = 1;
+            this.dataGridView_HoatDong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_HoatDong_CellClick);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Mã Hoạt Động";
             this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên Hoạt Động";
-            this.Column2.Name = "Column2";
             // 
             // Column3
             // 
@@ -282,6 +285,7 @@
             // 
             this.Column4.HeaderText = "Mô Tả";
             this.Column4.Name = "Column4";
+            this.Column4.Width = 150;
             // 
             // Column5
             // 
@@ -303,16 +307,6 @@
             this.Column8.HeaderText = "Mã Lớp";
             this.Column8.Name = "Column8";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView_DSHD);
-            this.groupBox2.Location = new System.Drawing.Point(362, 70);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(839, 326);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh Sách Hoạt Động";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -326,7 +320,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbo_GioiTinh);
+            this.groupBox4.Controls.Add(this.txt_GioiTinh);
             this.groupBox4.Controls.Add(this.dtp_NgaySinh);
             this.groupBox4.Controls.Add(this.txt_SoDienThoai);
             this.groupBox4.Controls.Add(this.txt_DiaChi);
@@ -347,14 +341,6 @@
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông Tin Sinh Viên";
-            // 
-            // cbo_GioiTinh
-            // 
-            this.cbo_GioiTinh.FormattingEnabled = true;
-            this.cbo_GioiTinh.Location = new System.Drawing.Point(127, 89);
-            this.cbo_GioiTinh.Name = "cbo_GioiTinh";
-            this.cbo_GioiTinh.Size = new System.Drawing.Size(121, 28);
-            this.cbo_GioiTinh.TabIndex = 16;
             // 
             // dtp_NgaySinh
             // 
@@ -475,8 +461,9 @@
             this.Column12});
             this.dataGridView_SV.Location = new System.Drawing.Point(6, 19);
             this.dataGridView_SV.Name = "dataGridView_SV";
-            this.dataGridView_SV.Size = new System.Drawing.Size(821, 279);
+            this.dataGridView_SV.Size = new System.Drawing.Size(821, 270);
             this.dataGridView_SV.TabIndex = 7;
+            this.dataGridView_SV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_SV_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -540,6 +527,13 @@
             this.btn_Thoat.UseVisualStyleBackColor = false;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
+            // txt_GioiTinh
+            // 
+            this.txt_GioiTinh.Location = new System.Drawing.Point(127, 91);
+            this.txt_GioiTinh.Name = "txt_GioiTinh";
+            this.txt_GioiTinh.Size = new System.Drawing.Size(100, 26);
+            this.txt_GioiTinh.TabIndex = 17;
+            // 
             // frmXemDanhSachThamGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,8 +550,8 @@
             this.Load += new System.EventHandler(this.frmXemDanhSachThamGia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DSHD)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HoatDong)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SV)).EndInit();
@@ -570,7 +564,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtp_ThoiGian;
+        private System.Windows.Forms.DateTimePicker t_ThoiGian;
         private System.Windows.Forms.DateTimePicker dtp_NgayThucHien;
         private System.Windows.Forms.TextBox txt_MaLopHoatDong;
         private System.Windows.Forms.TextBox txt_DiaDiem;
@@ -586,19 +580,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView_DSHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox cbo_GioiTinh;
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
         private System.Windows.Forms.TextBox txt_SoDienThoai;
         private System.Windows.Forms.TextBox txt_DiaChi;
@@ -622,5 +606,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.DataGridView dataGridView_HoatDong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.TextBox txt_GioiTinh;
     }
 }

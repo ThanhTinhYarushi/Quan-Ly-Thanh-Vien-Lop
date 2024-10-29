@@ -234,6 +234,60 @@ namespace QuanLyThanhVien.BUS
                 return false;
             }
         }
+        public Diem getDiemSV(string mssv,string classID)
+        {
+            Diem diem = db.Diem.FirstOrDefault(p => p.MSSV == mssv&&p.ClassID==classID);
+            if (diem==null)
+            {
+                return null;
+            }
+            else
+            {
+                return diem;
+            }
+        }
+        public bool capNhatDiem(string mssv,string classid,double cc,double gk, double ck)
+        {
+            Diem diem = db.Diem.FirstOrDefault(p => p.MSSV == mssv && p.ClassID == classid);
+            if (diem == null)
+            {
+                Diem diem1 = new Diem()
+                {
+                    MSSV= mssv,
+                    ClassID= classid,
+                    DiemQT = cc,  
+                    DiemGK = gk,
+                    DiemCK = ck   
+                };
+                db.Diem.Add(diem1);
+                int x =db.SaveChanges() ;
+                if (x==0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+                 
+            }
+            else
+            {
+                diem.DiemQT = cc;
+                diem.DiemGK = gk;
+                diem.DiemCK = ck;
+                db.Diem.AddOrUpdate(diem);
+                int x = db.SaveChanges();
+                
+                    return true;
+                
+            }
+        }
+        public List<PhanHoi> getPhanHoi(string hoatdongID)
+        {
+            int id = int.Parse(hoatdongID);
+            return db.PhanHoi.Where(p=>p.HoatDongID==id).ToList();
+        }
 
 
 

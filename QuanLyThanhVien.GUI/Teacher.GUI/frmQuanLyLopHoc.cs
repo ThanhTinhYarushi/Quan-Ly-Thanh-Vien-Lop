@@ -120,14 +120,21 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         private void btn_Tim_Click(object sender, EventArgs e)
         {
             string tim = txt_Tim.Text.Trim().ToLower();
+            //check dl o txt
+            if (string.IsNullOrEmpty(tim))
+            {
+                MessageBox.Show("Vui lòng nhập mã lớp hoặc tên lớp để tìm kiếm.", "Thông báo");
+                txt_Tim.Focus();
+                return;
+            }
             // Duyet cac dgv de tim lop
             foreach (DataGridViewRow row in dataGridView_Lop.Rows)
             {
                 if(!row.IsNewRow)
                 {
                     // neu loi null o cot dulieu, xai Value?
-                    string maLop = row.Cells[0].Value.ToString().ToLower();
-                    string tenLop = row.Cells[1].Value.ToString().ToLower();
+                    string maLop = row.Cells[0].Value?.ToString().ToLower();
+                    string tenLop = row.Cells[1].Value?.ToString().ToLower();
 
                     if(maLop != null && maLop.Contains(tim) || tenLop != null && tenLop.Contains(tim))
                     {
@@ -147,8 +154,19 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_TaoMoi_Click(object sender, EventArgs e)
         {
+            // refresh
             dataGridView_Lop.Rows.Clear();
             dataGridView_SV.Rows.Clear();
+            txt_MaLop.Clear();
+            txt_TenLop.Clear();
+            txt_MaSinhVien.Clear();
+            txt_TenSinhVien.Clear();
+            txt_Email.Clear();
+            txt_SoDienThoai.Clear();
+            txt_DiaChi.Clear();
+            txt_GioiTinh.Clear();
+            dtp_NgaySinh.Value = DateTime.Today;
+
             fill_dgv_Lop();
         }
     }

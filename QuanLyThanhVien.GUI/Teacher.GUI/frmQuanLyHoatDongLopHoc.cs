@@ -15,7 +15,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
     public partial class frmQuanLyHoatDongLopHoc : Form
     {
         private readonly GiaoVienService gvS = new GiaoVienService();
-        bool x; // giup cac ham them/sua/xoa in thong bao
+        bool isSuccess; // giup cac ham them/sua/xoa in thong bao
         public frmQuanLyHoatDongLopHoc()
         {
             InitializeComponent();
@@ -77,10 +77,16 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            // textbox
+            if (string.IsNullOrEmpty(txt_TieuDe.Text) || string.IsNullOrEmpty(txt_DiaDiem.Text) || string.IsNullOrEmpty(txt_MaLopHoatDong.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin cho Tiêu đề, Địa điểm và Mã lớp hoạt động.", "Thông Báo");
+                return;
+            }
             DateTime selectedTime = t_ThoiGian.Value;
             TimeSpan timeSpan = selectedTime.TimeOfDay;
-            x = gvS.CreateHoatDong(txt_TieuDe.Text, txt_rtb_MoTa.Text, dtp_NgayThucHien.Value, timeSpan, txt_DiaDiem.Text, txt_MaLopHoatDong.Text);
-            if (x)
+            isSuccess = gvS.CreateHoatDong(txt_TieuDe.Text, txt_rtb_MoTa.Text, dtp_NgayThucHien.Value, timeSpan, txt_DiaDiem.Text, txt_MaLopHoatDong.Text);
+            if (isSuccess)
             {
                 MessageBox.Show("Thêm Thành Công","Thông Báo");
                 refresh();
@@ -93,7 +99,18 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txt_MaHoatDong.Text))
+            if (string.IsNullOrEmpty(txt_MaHoatDong.Text))
+            {
+                MessageBox.Show("Không thể xoá nếu để trống mã hoạt động", "Thông Báo");
+                return;
+            }
+
+            if (!int.TryParse(txt_MaHoatDong.Text, out int maHoatDong))
+            {
+                MessageBox.Show("Mã hoạt động không hợp lệ.", "Thông Báo");
+                return;
+            }
+            if (string.IsNullOrEmpty(txt_MaLopHoatDong.Text))
             {
                 MessageBox.Show("Không thể xoá nếu để trống mã lớp", "Thông Báo");
                 return; // thoat sk neu ko se hien box xac nhan xoa
@@ -101,8 +118,8 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             DialogResult result = MessageBox.Show("Bạn có muốn xoá không?", "Xác Nhận Xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                x = gvS.DeleteHoatDong(int.Parse(txt_MaHoatDong.Text));
-                if (x)
+                isSuccess = gvS.DeleteHoatDong(int.Parse(txt_MaHoatDong.Text));
+                if (isSuccess)
                 {
                     MessageBox.Show("Xoá Thành Công", "Thông Báo");
                     refresh();
@@ -118,7 +135,30 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            
+            // kt
+            if (string.IsNullOrEmpty(txt_MaHoatDong.Text) || !int.TryParse(txt_MaHoatDong.Text, out int maHoatDong))
+            {
+                MessageBox.Show("Vui lòng chọn một hoạt động hợp lệ để sửa.", "Thông Báo");
+                return;
+            }
+            if (string.IsNullOrEmpty(txt_TieuDe.Text) || string.IsNullOrEmpty(txt_DiaDiem.Text) || string.IsNullOrEmpty(txt_MaLopHoatDong.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin cho Tiêu đề, Địa điểm và Mã lớp hoạt động.", "Thông Báo");
+                return;
+            }
+            DateTime selectedTime = t_ThoiGian.Value;
+            TimeSpan timeSpan = selectedTime.TimeOfDay;
+            //isSuccess = gvS.S(maHoatDong, txt_TieuDe.Text, txt_rtb_MoTa.Text, dtp_NgayThucHien.Value, timeSpan, txt_DiaDiem.Text, txt_MaLopHoatDong.Text);
+
+            if (isSuccess)
+            {
+                MessageBox.Show("Sửa Thành Công", "Thông Báo");
+                refresh();
+            }
+            else
+            {
+                MessageBox.Show("Sửa Thất Bại", "Thông Báo");
+            }
         }
         private void CamSua(bool choPhep)
         {

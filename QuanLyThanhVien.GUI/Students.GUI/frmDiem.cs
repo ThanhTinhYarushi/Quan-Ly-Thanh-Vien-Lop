@@ -1,6 +1,4 @@
-﻿using QuanLyThanhVien.BUS;
-using QuanLyThanhVien.DAL.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,45 +12,19 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 {
     public partial class frmDiem : Form
     {
-        private readonly SinhVienService service= new SinhVienService();
         public frmDiem()
         {
             InitializeComponent();
         }
 
+        private void btnDangki_Click(object sender, EventArgs e)
+        {
 
-        private void frmDiem_Load(object sender, EventArgs e)
-        {
-            loadDiem();
-        }
-        private void loadDiem()
-        {
-            foreach (var item in service.GetDiems())
-            {
-                double tong = (((item.DiemGK + item.DiemQT)/2)+item.DiemCK)/2;
-                dataGridView1.Rows.Add(item.ClassID,service.getTenLop(item.ClassID),item.DiemQT,item.DiemGK,item.DiemCK,tong);
-            }
-        }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0) // Kiểm tra nếu hàng được chọn là hợp lệ
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-
-               
-                textBox1.Text = row.Cells[0].Value?.ToString(); // Mã lớp
-                textBox2.Text = row.Cells[1].Value?.ToString(); // Môn học
-                textBox4.Text = row.Cells[2].Value?.ToString(); // Điểm chuyên cần
-                textBox5.Text = row.Cells[3].Value?.ToString(); // Điểm giữa kì
-                textBox6.Text = row.Cells[4].Value?.ToString(); // Điểm cuối kì
-                textBox7.Text = row.Cells[5].Value?.ToString(); // Điểm tổng
-            }
         }
 
-        private void btnTraCuu_Click(object sender, EventArgs e)
+        private void txtTenlop_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
-
 }

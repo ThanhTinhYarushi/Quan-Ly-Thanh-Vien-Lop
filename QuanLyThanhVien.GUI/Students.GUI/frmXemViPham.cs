@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace QuanLyThanhVien.GUI.Students.GUI
 {
-    public partial class frmPhanHoi : Form
+    public partial class frmXemViPham : Form
     {
-        public frmPhanHoi()
+        public frmXemViPham()
         {
             InitializeComponent();
         }
 
-        private void btnTraCuu_Click(object sender, EventArgs e)
+        private void frmXemViPham_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            // load tất cả vi phạm của sinh vien
         }
     }
 }

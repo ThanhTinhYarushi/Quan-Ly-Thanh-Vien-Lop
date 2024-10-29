@@ -1,5 +1,4 @@
-﻿using QuanLyThanhVien.DAL.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +41,6 @@ namespace QuanLyThanhVien.GUI.Students.GUI
             frmThongTinCaNhanSinhVien frmNV = new frmThongTinCaNhanSinhVien();
             frmNV.MdiParent = this;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
 
@@ -73,7 +71,6 @@ namespace QuanLyThanhVien.GUI.Students.GUI
             frmHoatDong frmNV = new frmHoatDong();
             frmNV.MdiParent = this;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
 
@@ -94,97 +91,6 @@ namespace QuanLyThanhVien.GUI.Students.GUI
             frmThongTinCaNhanSinhVien frmNV = new frmThongTinCaNhanSinhVien();
             frmNV.MdiParent = this;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
-            frmNV.Show();
-        }
-
-        private void xemĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.Name == "frmDiem")
-                {
-                    f.Activate();
-                    f.BringToFront();
-                    f.WindowState = FormWindowState.Maximized;
-                    f.Show();
-                    return;
-                }
-            }
-
-            frmDiem frmNV = new frmDiem();
-            frmNV.MdiParent = this;
-            frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
-            frmNV.Show();
-            
-        }
-
-        private void thôngTinLớpHọcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.Name == "frmLopSinhVien")
-                {
-                    f.Activate();
-                    f.BringToFront();
-                    f.WindowState = FormWindowState.Maximized;
-                    f.Show();
-                    return;
-                }
-            }
-
-            frmLopSinhVien frmNV = new frmLopSinhVien();
-            frmNV.MdiParent = this;
-            frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
-            frmNV.Show();
-        }
-
-        private void tsmThongBao_Click(object sender, EventArgs e)
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.Name == "frmThongBao")
-                {
-                    f.Activate();
-                    f.BringToFront();
-                    f.WindowState = FormWindowState.Maximized;
-                    f.Show();
-                    return;
-                }
-            }
-
-            frmThongBao frmNV = new frmThongBao();
-            frmNV.MdiParent = this;
-            frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
-            frmNV.Show();
-        }
-
-        private void tsmThongTin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tsmPhanHoi_Click(object sender, EventArgs e)
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                if (f.Name == "frmPhanHoi")
-                {
-                    f.Activate();
-                    f.BringToFront();
-                    f.WindowState = FormWindowState.Maximized;
-                    f.Show();
-                    return;
-                }
-            }
-
-            frmPhanHoi frmNV = new frmPhanHoi();
-            frmNV.MdiParent = this;
-            frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
     }

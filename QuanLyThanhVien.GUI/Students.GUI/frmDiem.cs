@@ -49,9 +49,14 @@ namespace QuanLyThanhVien.GUI.Students.GUI
             }
         }
 
-        private void btnTraCuu_Click(object sender, EventArgs e)
-        {
+       
 
+       
+
+        private void frmDiem_Resize_1(object sender, EventArgs e)
+        {
+            groupBox1.Left = (this.ClientSize.Width - groupBox1.Width) / 2;
+            groupBox1.Top = (this.ClientSize.Height - groupBox1.Height) / 2;
         }
     }
 

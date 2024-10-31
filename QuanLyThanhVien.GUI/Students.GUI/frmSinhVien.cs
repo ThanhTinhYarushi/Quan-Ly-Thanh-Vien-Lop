@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QuanLyThanhVien.GUI.Students.GUI
 {
@@ -41,8 +42,10 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             frmThongTinCaNhanSinhVien frmNV = new frmThongTinCaNhanSinhVien();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
+          
             frmNV.Show();
         }
 
@@ -72,8 +75,9 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             frmHoatDong frmNV = new frmHoatDong();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
 
@@ -93,8 +97,9 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             frmThongTinCaNhanSinhVien frmNV = new frmThongTinCaNhanSinhVien();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.ClientSize.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.ClientSize.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
 
@@ -114,8 +119,9 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             frmDiem frmNV = new frmDiem();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
             
         }
@@ -136,8 +142,9 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             frmLopSinhVien frmNV = new frmLopSinhVien();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
 
@@ -157,8 +164,9 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             ThongBao frmNV = new ThongBao();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
 
@@ -183,8 +191,9 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             frmPhanHoi frmNV = new frmPhanHoi();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
-            frmNV.Dock = DockStyle.Fill;
             frmNV.Show();
         }
     }

@@ -95,5 +95,16 @@ namespace QuanLyThanhVien.GUI.Students.GUI
                 }
             }
         }
+
+        private void frmHoatDong_Resize(object sender, EventArgs e)
+        {
+            groupBox1.Left = (this.ClientSize.Width - groupBox1.Width) / 2;
+            groupBox1.Top = (this.ClientSize.Height - groupBox1.Height) / 2;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace QuanLyThanhVien.DAL.Entities
         public GiaoVien()
         {
             this.HoatDong = new HashSet<HoatDong>();
+            this.Lop = new HashSet<Lop>();
             this.UserAccount = new HashSet<UserAccount>();
         }
     
@@ -31,6 +32,8 @@ namespace QuanLyThanhVien.DAL.Entities
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoatDong> HoatDong { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Lop> Lop { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserAccount> UserAccount { get; set; }
     }

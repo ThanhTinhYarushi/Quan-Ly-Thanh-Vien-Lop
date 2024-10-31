@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QuanLyThanhVien.GUI.Admin.GUI
 {
@@ -17,6 +18,13 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
         private readonly SinhVienService svS = new SinhVienService();
         // lay tat ca sv va gv
         // lay tat ca lop
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            // Tính toán vị trí để căn giữa GroupBox
+            groupBox1.Left = (this.ClientSize.Width - groupBox1.Width) / 2;
+            groupBox1.Top = (this.ClientSize.Height - groupBox1.Height) / 2;
+        }
+
         public frmXemThongTinCaNhan()
         {
             InitializeComponent();

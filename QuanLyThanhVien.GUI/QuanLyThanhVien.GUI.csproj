@@ -62,6 +62,42 @@
     <Compile Include="Admin.GUI\frmAdmin.Designer.cs">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyHoatDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyHoatDong.Designer.cs">
+      <DependentUpon>frmQuanLyHoatDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyPhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyPhanHoi.Designer.cs">
+      <DependentUpon>frmQuanLyPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyThongBao.Designer.cs">
+      <DependentUpon>frmQuanLyThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemDiemDanhVaViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemDiemDanhVaViPham.Designer.cs">
+      <DependentUpon>frmXemDiemDanhVaViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemThongTinCaNhan.Designer.cs">
+      <DependentUpon>frmXemThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.GUI\frmDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,29 +128,29 @@
     <Compile Include="Students.GUI\frmSinhVien.Designer.cs">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Students.GUI\frmThamGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Students.GUI\frmThamGia.Designer.cs">
-      <DependentUpon>frmThamGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Students.GUI\frmThongBao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Students.GUI\frmThongBao.Designer.cs">
-      <DependentUpon>frmThongBao.cs</DependentUpon>
-    </Compile>
     <Compile Include="Students.GUI\frmThongTinCaNhanSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Students.GUI\frmThongTinCaNhanSinhVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Students.GUI\ThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.GUI\ThongBao.Designer.cs">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.GUI\ThongTinLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Students.GUI\ThongTinLopHoc.Designer.cs">
       <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System.GUI\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System.GUI\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="System.GUI\frmLogIn.cs">
       <SubType>Form</SubType>
@@ -184,6 +220,27 @@
     <Compile Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.Designer.cs">
       <DependentUpon>frmXemThongTinPhanHoiSinhVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin.GUI\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyHoatDong.resx">
+      <DependentUpon>frmQuanLyHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyLopHoc.resx">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyPhanHoi.resx">
+      <DependentUpon>frmQuanLyPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyThongBao.resx">
+      <DependentUpon>frmQuanLyThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmXemDiemDanhVaViPham.resx">
+      <DependentUpon>frmXemDiemDanhVaViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmXemThongTinCaNhan.resx">
+      <DependentUpon>frmXemThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmDiem.resx">
       <DependentUpon>frmDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,17 +256,17 @@
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Students.GUI\frmThamGia.resx">
-      <DependentUpon>frmThamGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Students.GUI\frmThongBao.resx">
-      <DependentUpon>frmThongBao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmThongTinCaNhanSinhVien.resx">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Students.GUI\ThongBao.resx">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\ThongTinLopHoc.resx">
       <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System.GUI\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System.GUI\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>

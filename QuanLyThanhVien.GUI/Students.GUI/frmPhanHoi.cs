@@ -101,5 +101,11 @@ namespace QuanLyThanhVien.GUI.Students.GUI
             txtTieuDe.Text = "";
           
         }
+
+        private void frmPhanHoi_Resize(object sender, EventArgs e)
+        {
+            groupBox1.Left = (this.ClientSize.Width - groupBox1.Width) / 2;
+            groupBox1.Top = (this.ClientSize.Height - groupBox1.Height) / 2;
+        }
     }
 }

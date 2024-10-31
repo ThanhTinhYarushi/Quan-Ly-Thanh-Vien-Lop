@@ -45,5 +45,11 @@ namespace QuanLyThanhVien.GUI.Students.GUI
                 dgv_ThongBao.Rows.Add(item.TieuDe,item.NoiDung,item.NgayTao,service.getTenLop(item.ClassID));
             }
         }
+
+        private void ThongBao_Resize(object sender, EventArgs e)
+        {
+            groupBox1.Left = (this.ClientSize.Width - groupBox1.Width) / 2;
+            groupBox1.Top = (this.ClientSize.Height - groupBox1.Height) / 2;
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyThanhVien.GUI.Students.GUI;
+using QuanLyThanhVien.GUI.Teacher.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,141 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
         public frmAdmin()
         {
             InitializeComponent();
+        }
+        private void hideForm()
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.Hide();
+            }
+        }
+
+        private void tsb_XemThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmXemThongTinCaNhan")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmXemThongTinCaNhan frm = new frmXemThongTinCaNhan();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+
+        }
+
+        private void tsb_QuanLyLopHoc_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmQuanLyLopHoc")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmQuanLyLopHoc frm = new frmQuanLyLopHoc();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_DiemDanhVaViPham_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmXemDiemDanhVaViPham")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmXemDiemDanhVaViPham frm = new frmXemDiemDanhVaViPham();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_QuanLyHoatDong_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmQuanLyHoatDong")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmQuanLyHoatDong frm = new frmQuanLyHoatDong();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_QuanLyThongBao_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmQuanLyThongBao")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmQuanLyThongBao frm = new frmQuanLyThongBao();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void tsb_QuanLyPhanHoi_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmXemThongTinCaNhan")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmQuanLyPhanHoi frm = new frmQuanLyPhanHoi();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
     }
 }

@@ -17,5 +17,12 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
         {
             InitializeComponent();
         }
+
+        private void frmXemDiemDanhVaViPham_Resize(object sender, EventArgs e)
+        {
+            // Tính toán vị trí để căn giữa GroupBox
+            groupBox1.Left = (this.ClientSize.Width - groupBox1.Width) / 2;
+            groupBox1.Top = (this.ClientSize.Height - groupBox1.Height) / 2;
+        }
     }
 }

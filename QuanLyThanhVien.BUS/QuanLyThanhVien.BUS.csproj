@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ObjectInstance\GiaoVienInstance.cs" />
+    <Compile Include="ObjectService\AdminService.cs" />
     <Compile Include="ObjectService\GiaoVienService.cs" />
     <Compile Include="ObjectInstance\SinhVienInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

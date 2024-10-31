@@ -1,5 +1,6 @@
 ﻿using QuanLyThanhVien.BUS;
 using QuanLyThanhVien.DAL.Entities;
+using QuanLyThanhVien.GUI.Admin.GUI;
 using QuanLyThanhVien.GUI.Students.GUI;
 using QuanLyThanhVien.GUI.Teacher.GUI;
 using System;
@@ -78,6 +79,11 @@ namespace QuanLyThanhVien.GUI
                         frmGiangVien frmgv = new frmGiangVien();
                         GiaoVienInstance.getSinhVien(user.MSGV);
                         frmgv.Show();
+                    }
+                    else if (user.Role == "Admin")
+                    {
+                        frmAdmin frmAdmin = new frmAdmin();
+                        frmAdmin.Show();
                     }
 
                     // Đóng form đăng nhập

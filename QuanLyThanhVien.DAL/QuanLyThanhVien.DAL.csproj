@@ -113,11 +113,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
     <EntityDeploy Include="Entities\QLTV.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QLTV.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="Entities\QLTV.edmx.diagram">
       <DependentUpon>QLTV.edmx</DependentUpon>
     </None>
@@ -126,6 +126,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Entities\QLTV.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

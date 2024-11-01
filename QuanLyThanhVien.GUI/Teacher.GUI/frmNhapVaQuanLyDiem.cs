@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,18 +29,34 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         }
         private void dataGridView_Lop_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Kiểm tra nếu hàng được chọn là hợp lệ
+            if (dataGridView_Lop.Columns[0].HeaderText=="MSSV")
             {
-                DataGridViewRow row = dataGridView_Lop.Rows[e.RowIndex];
+                if (e.RowIndex >= 0) // Kiểm tra nếu hàng được chọn là hợp lệ
+                {
+                    DataGridViewRow row = dataGridView_Lop.Rows[e.RowIndex];
 
 
-                txt_MaSinhVien.Text = row.Cells[0].Value?.ToString(); // Mã lớp
-                txt_TenSinhVien.Text = row.Cells[1].Value?.ToString(); // Môn học
-                txt_DiemChuyenCan.Text = row.Cells[2].Value?.ToString(); // Điểm chuyên cần
-                txt_DiemGiuaKi.Text = row.Cells[3].Value?.ToString(); // Điểm giữa kì
-                txt_DiemCuoiKy.Text = row.Cells[4].Value?.ToString(); // Điểm cuối kì
-                txt_DiemTongKet.Text = row.Cells[5].Value?.ToString(); // Điểm tổng
+                    txt_MaSinhVien.Text = row.Cells[0].Value?.ToString(); // Mã sinh vien
+                    txt_TenSinhVien.Text = row.Cells[1].Value?.ToString(); // ten
+                    txt_DiemChuyenCan.Text = row.Cells[2].Value?.ToString(); // Điểm chuyên cần
+                    txt_DiemGiuaKi.Text = row.Cells[3].Value?.ToString(); // Điểm giữa kì
+                    txt_DiemCuoiKy.Text = row.Cells[4].Value?.ToString(); // Điểm cuối kì
+                    txt_DiemTongKet.Text = row.Cells[5].Value?.ToString(); // Điểm tổng
+                }
             }
+            else
+            {
+                if (e.RowIndex >= 0) // Kiểm tra nếu hàng được chọn là hợp lệ
+                {
+                    DataGridViewRow row = dataGridView_Lop.Rows[e.RowIndex];
+
+
+                    txt_MaLop.Text = row.Cells[0].Value?.ToString(); // Mã lớp
+                    txt_TenLop.Text = row.Cells[1].Value?.ToString(); // Môn học
+                   
+                }
+            }
+            
         }
 
         private void dataGridView_Lop_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -87,39 +104,65 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         private void btn_XacNhan_Click(object sender, EventArgs e)
         {
             bool flag = true;
-            string flagname ="";
+            string flagname = "";
+
             foreach (DataGridViewRow row in dataGridView_Lop.Rows)
             {
                 if (row.IsNewRow)
                     continue;
+
                 string mssv = row.Cells[0].Value.ToString();
                 string classid = txt_MaLop.Text;
-                double cc = double.Parse( row.Cells[2].Value.ToString());
-                double gk = double.Parse(row.Cells[3].Value.ToString());
-                double ck = double.Parse(row.Cells[4].Value.ToString());
-                bool a = gvS.capNhatDiem(mssv, classid, cc, gk,ck);
+
+                // Kiểm tra điểm chuyên cần
+                if (!double.TryParse(row.Cells[2].Value.ToString(), out double cc) || cc < 0 || cc > 10)
+                {
+                    MessageBox.Show("Điểm chuyên cần không hợp lệ! Vui lòng nhập giá trị từ 0 đến 10.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    row.Cells[2].Selected = true;
+                    flag = false;
+                    continue;
+                }
+
+                // Kiểm tra điểm giữa kỳ
+                if (!double.TryParse(row.Cells[3].Value.ToString(), out double gk) || gk < 0 || gk > 10)
+                {
+                    MessageBox.Show("Điểm giữa kỳ không hợp lệ! Vui lòng nhập giá trị từ 0 đến 10.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    row.Cells[3].Selected = true;
+                    flag = false;
+                    continue;
+                }
+
+                // Kiểm tra điểm cuối kỳ
+                if (!double.TryParse(row.Cells[4].Value.ToString(), out double ck) || ck < 0 || ck > 10)
+                {
+                    MessageBox.Show("Điểm cuối kỳ không hợp lệ! Vui lòng nhập giá trị từ 0 đến 10.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    row.Cells[4].Selected = true;
+                    flag = false;
+                    continue;
+                }
+
+                // Cập nhật điểm nếu dữ liệu hợp lệ
+                bool a = gvS.capNhatDiem(mssv, classid, cc, gk, ck);
                 if (a == false)
                 {
                     flag = false;
                     flagname += row.Cells[1].Value.ToString() + " ";
                 }
-
             }
+
+            // Kiểm tra trạng thái cập nhật
             if (flag == true)
             {
-                MessageBox.Show("cap nhat  thanh cong");
+                MessageBox.Show("Cập nhật thành công", "Thông Báo");
             }
             else
             {
-                MessageBox.Show("cap nhat ko thanh ko\n", flagname);
-
+                MessageBox.Show("Cập nhật không thành công cho sinh viên: " + flagname, "Thông Báo");
             }
         }
 
-        private void btn_Huy_Click(object sender, EventArgs e)
-        {
 
-        }
+      
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {

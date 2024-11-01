@@ -66,5 +66,23 @@ namespace QuanLyThanhVien.GUI.Students.GUI
             groupBox1.Left = (this.ClientSize.Width - groupBox1.Width) / 2;
             groupBox1.Top = (this.ClientSize.Height - groupBox1.Height) / 2;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            // Lấy thể hiện của MainForm
+            frmSinhVien mainForm = (frmSinhVien)this.ParentForm;
+
+            // Mở FormChild2 thông qua phương thức OpenChildForm của MainForm
+            mainForm.loadThongBao( );
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            // Lấy thể hiện của MainForm
+            frmSinhVien mainForm = (frmSinhVien)this.ParentForm;
+
+            // Mở FormChild2 thông qua phương thức OpenChildForm của MainForm
+            mainForm.loadhoatdong();
+        }
     }
 }

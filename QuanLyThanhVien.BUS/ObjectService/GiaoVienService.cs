@@ -172,10 +172,31 @@ namespace QuanLyThanhVien.BUS
                 hd.ThoiGian = thoiGian;
                 hd.DiaDiem = diaDiem;
                 hd.ClassID = classID;
-                db.HoatDong.AddOrUpdate(hd);
+                db.HoatDong.Add(hd);
                 db.SaveChanges();
                 return true;
             }else { return false; }
+
+        }
+        public bool UpdateHoatDong(int hoatdongid,string tieuDe, string moTa, DateTime ngayThucHien, TimeSpan thoiGian, string diaDiem, string classID)
+        {
+            string msgv = GiaoVienInstance.gv.MSGV;
+            if (msgv == db.Lop.FirstOrDefault(p => p.ClassID == classID).MSGV)
+            {
+                HoatDong hd = new HoatDong();
+                hd.HoatDongID = hoatdongid;
+                hd.MSGV = msgv;
+                hd.TieuDe = tieuDe;
+                hd.MoTa = moTa;
+                hd.NgayThucHien = ngayThucHien;
+                hd.ThoiGian = thoiGian;
+                hd.DiaDiem = diaDiem;
+                hd.ClassID = classID;
+                db.HoatDong.AddOrUpdate(hd);
+                db.SaveChanges();
+                return true;
+            }
+            else { return false; }
 
         }
         public bool DeleteHoatDong(int hoatDongID)
@@ -287,6 +308,21 @@ namespace QuanLyThanhVien.BUS
         {
             int id = int.Parse(hoatdongID);
             return db.PhanHoi.Where(p=>p.HoatDongID==id).ToList();
+        }
+        public bool KtLopThuocGiaoVien(string classid)
+        {
+            string msgv = GiaoVienInstance.gv.MSGV;
+            try
+            {
+                Lop kt = db.Lop.FirstOrDefault(p => p.MSGV == GiaoVienInstance.gv.MSGV && p.ClassID == classid);
+               return kt!=null;
+            }
+            catch (Exception)
+            {
+
+                return false ;
+            }
+          
         }
 
 

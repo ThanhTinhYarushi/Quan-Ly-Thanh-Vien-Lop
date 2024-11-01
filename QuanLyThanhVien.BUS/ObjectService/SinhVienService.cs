@@ -175,7 +175,29 @@ namespace QuanLyThanhVien.BUS
         {
             return db.HoatDong.FirstOrDefault(p=>p.HoatDongID==maHD).TieuDe;
         }
+        public bool capnhat(string ten,DateTime ngaySinh ,string email, bool gt, string diachi, string sdt)
+        {
+            try
+            {
+                SinhVienInstance.sv.HoTen = ten;
+                SinhVienInstance.sv.NgaySinh = ngaySinh;
+                SinhVienInstance.sv.Email = email;
+                SinhVienInstance.sv.GioiTinh = gt;
+                SinhVienInstance.sv.DiaChi = diachi;
+                SinhVienInstance.sv.SoDienThoai = sdt;
+                db.SinhVien.AddOrUpdate(SinhVienInstance.sv);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
 
+                return false;
+            }
+        
+
+
+        }
 
 
 

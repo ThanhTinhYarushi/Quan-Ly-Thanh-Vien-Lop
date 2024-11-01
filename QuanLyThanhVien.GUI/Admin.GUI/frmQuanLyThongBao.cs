@@ -50,16 +50,17 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
         private void xemThongBao()
         {
             dataGridView_Lop.Rows.Clear();
-            dataGridView_Lop.Columns[0].HeaderText = "Tiêu đề ";
-            dataGridView_Lop.Columns[1].HeaderText = "Nội dung";
-            dataGridView_Lop.Columns[2].HeaderText = "Ngày tạo";
-            dataGridView_Lop.Columns[3].HeaderText = "Mã lớp";
-            dataGridView_Lop.Columns[4].HeaderText = "Tên lớp";
+            dataGridView_Lop.Columns[0].HeaderText = "Ma tb";
+            dataGridView_Lop.Columns[1].HeaderText = "Tiêu đề ";
+            dataGridView_Lop.Columns[2].HeaderText = "Nội dung";
+            dataGridView_Lop.Columns[3].HeaderText = "Ngày tạo";
+            dataGridView_Lop.Columns[4].HeaderText = "Mã lớp";
+            dataGridView_Lop.Columns[5].HeaderText = "Tên lớp";
             
             dataGridView_Lop.Rows.Clear();
             foreach (var item in service.getthongBaos())
             {
-                dataGridView_Lop.Rows.Add(item.TieuDe,item.NoiDung,item.NgayTao,item.Lop.ClassID,item.Lop.TenLop);
+                dataGridView_Lop.Rows.Add(item.ThongBaoID,item.TieuDe,item.NoiDung,item.NgayTao,item.Lop.ClassID,item.Lop.TenLop);
             }
         }
 
@@ -80,11 +81,13 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
                 string malop = dataGridView_Lop.Rows[e.RowIndex].Cells[0].Value.ToString();
                 MessageBox.Show(malop);
                 dataGridView_Lop.Rows.Clear();
-                dataGridView_Lop.Columns[0].HeaderText = "Tiêu đề ";
-                dataGridView_Lop.Columns[1].HeaderText = "Nội dung";
-                dataGridView_Lop.Columns[2].HeaderText = "Ngày tạo";
-                dataGridView_Lop.Columns[3].HeaderText = "Mã lớp";
-                dataGridView_Lop.Columns[4].HeaderText = "Tên lớp";
+                dataGridView_Lop.Columns[0].HeaderText = "Ma tb";
+                dataGridView_Lop.Columns[1].HeaderText = "Tiêu đề ";
+                dataGridView_Lop.Columns[2].HeaderText = "Nội dung";
+                dataGridView_Lop.Columns[3].HeaderText = "Ngày tạo";
+                dataGridView_Lop.Columns[4].HeaderText = "Mã lớp";
+                dataGridView_Lop.Columns[5].HeaderText = "Tên lớp";
+
 
                 dataGridView_Lop.Rows.Clear();
                 foreach (var item in service.GetThongBaoID(malop))
@@ -94,6 +97,115 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
             }
           
         }
+
+        private void dataGridView_Lop_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView_Lop.Columns[0].HeaderText=="Ma tb")
+            if (e.RowIndex >= 0) // Kiểm tra nếu hàng được chọn là hợp lệ
+            {
+                DataGridViewRow row = dataGridView_Lop.Rows[e.RowIndex];
+                txt_MaThongBao.Text = row.Cells[0].Value?.ToString();
+                txt_TieuDeThongBao.Text = row.Cells[1].Value?.ToString();
+                rtb_txt_NoiDungThongBao.Text = row.Cells[2].Value?.ToString();
+                dtp_NgayTao.Text = row.Cells[3].Value?.ToString();
+                cbo_MaLop.Text = row.Cells[4].Value?.ToString();
+                txt_TenLop.Text = row.Cells[5].Value?.ToString();
+            }
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra các trường không được để trống
+            if (string.IsNullOrWhiteSpace(txt_TieuDeThongBao.Text))
+            {
+                MessageBox.Show("Tiêu đề không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_TieuDeThongBao.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(rtb_txt_NoiDungThongBao.Text))
+            {
+                MessageBox.Show("Nội dung không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                rtb_txt_NoiDungThongBao.Focus();
+                return;
+            }
+
+            if (cbo_MaLop.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn lớp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cbo_MaLop.Focus();
+                return;
+            }
+
+            // Gọi hàm thêm thông báo
+            DateTime ngayTao = dtp_NgayTao.Value;
+            string classID = cbo_MaLop.Text;
+            service.themThemThongBao(txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, ngayTao, classID);
+            MessageBox.Show("Thêm thông báo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            xemThongBao(); // Giả định bạn có hàm để tải lại dữ liệu
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra các trường không được để trống
+            if (string.IsNullOrWhiteSpace(txt_MaThongBao.Text))
+            {
+                MessageBox.Show("Mã thông báo không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_MaThongBao.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txt_TieuDeThongBao.Text))
+            {
+                MessageBox.Show("Tiêu đề không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_TieuDeThongBao.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(rtb_txt_NoiDungThongBao.Text))
+            {
+                MessageBox.Show("Nội dung không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                rtb_txt_NoiDungThongBao.Focus();
+                return;
+            }
+
+            if (cbo_MaLop.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn lớp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cbo_MaLop.Focus();
+                return;
+            }
+
+            // Gọi hàm cập nhật thông báo
+            int maThongBao = int.Parse(txt_MaThongBao.Text); // Giả định mã thông báo là số nguyên
+            DateTime ngayTao = dtp_NgayTao.Value;
+            string classID = cbo_MaLop.Text;
+            service.updateThongbao(maThongBao, txt_TieuDeThongBao.Text, rtb_txt_NoiDungThongBao.Text, ngayTao, classID);
+            MessageBox.Show("Cập nhật thông báo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            xemThongBao(); // Giả định bạn có hàm để tải lại dữ liệu
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra mã thông báo không được để trống
+            if (string.IsNullOrWhiteSpace(txt_MaThongBao.Text))
+            {
+                MessageBox.Show("Mã thông báo không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_MaThongBao.Focus();
+                return;
+            }
+
+            // Xác nhận trước khi xóa
+            var result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông báo này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                int maThongBao = int.Parse(txt_MaThongBao.Text); // Giả định mã thông báo là số nguyên
+                service.XoaThongBao(maThongBao);
+                MessageBox.Show("Xóa thông báo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                xemThongBao(); // Giả định bạn có hàm để tải lại dữ liệu
+            }
+        }
+
     }
 
 }

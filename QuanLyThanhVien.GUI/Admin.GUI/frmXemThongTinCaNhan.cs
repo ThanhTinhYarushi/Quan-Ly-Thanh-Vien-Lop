@@ -1,4 +1,6 @@
 ﻿using QuanLyThanhVien.BUS;
+using QuanLyThanhVien.BUS.ObjectService;
+using QuanLyThanhVien.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
@@ -14,8 +17,8 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
 {
     public partial class frmXemThongTinCaNhan : Form
     {
-        private readonly GiaoVienService gvS = new GiaoVienService();
-        private readonly SinhVienService svS = new SinhVienService();
+        private readonly AdminService service = new AdminService(); 
+        QLTV2Entities db = new QLTV2Entities();
         // lay tat ca sv va gv
         // lay tat ca lop
         private void Form1_Resize(object sender, EventArgs e)
@@ -28,18 +31,12 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
         public frmXemThongTinCaNhan()
         {
             InitializeComponent();
+           
         }
 
         private void frmXemThongTinCaNhan_Load(object sender, EventArgs e)
         {
-            /*
-             Khi load thông tin sẽ hiển thị tất cả các sinh viên và tất cả giảng viên
-            txt_Role hiển thị cho admin là chức vụ j
-            khi tìm sẽ tìm ở cả 2 bảng
-            có thể thêm/Xoá Sinh viên hay gv nếu ta đang đứng ở bảng có role đó
-            có thể sửa password sinh viên dang select -> frm phụ
-            - chức vụ nếu sinh viên ko có chức vụ / gv => null
-             */
+            loadGiaoVien();
         }
 
         private void btn_Tim_Click(object sender, EventArgs e)
@@ -49,7 +46,12 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
 
         private void btn_TaoMoi_Click(object sender, EventArgs e)
         {
-            // refresh lại tất cả text và dgv
+            txt_DiaChi.Text = "";
+            txt_Email.Text = "";
+            txt_TrangThai.Text = "";
+            txt_SoDienThoai.Text = "";
+            txt_Ten.Text = "";
+            txt_Tim.Text = "";
         }
 
         private void btn_SuaThongTin_Click(object sender, EventArgs e)
@@ -68,48 +70,236 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
 
         }
 
-        private void btn_CapNhatAnhDaiDien_Click(object sender, EventArgs e)
-        {
-            // hàm nay ko can viet som cung dc
-        }
+       
 
-        private void btn_DoiPass_Click(object sender, EventArgs e)
-        {
-            // hàm này mở frm phụ đổi pass word
-        }
+        
 
         private void btn_XemSV_Click(object sender, EventArgs e)
         {
             dataGridView_obj.Rows.Clear();
-            dataGridView_obj.Columns[0].HeaderText = "Mã Sinh Viên";
-            dataGridView_obj.Columns[1].HeaderText = "Tên Sinh Vien";
-            dataGridView_obj.Columns[2].HeaderText = "Ngày Sinh";
-            dataGridView_obj.Columns[3].HeaderText = "Giới Tính";
-            dataGridView_obj.Columns[4].HeaderText = "Email";
-            dataGridView_obj.Columns[5].HeaderText = "Số Điện Thoại";
-            dataGridView_obj.Columns[6].HeaderText = "Địa Chỉ";
-
-            //foreach (var item in svS.GetSinhVien) // get tat ca sv
-            //{
-                                
-            //}
+            dataGridView_obj.Columns[0].HeaderText = "MSSV";
+            loadSinhVien(); 
         }
 
         private void btn_XemGV_Click(object sender, EventArgs e)
         {
             dataGridView_obj.Rows.Clear();
-            dataGridView_obj.Columns[0].HeaderText = "Mã Giáo Viên";
-            dataGridView_obj.Columns[1].HeaderText = "Tên Giáo Viên";
-            dataGridView_obj.Columns[2].HeaderText = "Ngày Sinh";
-            dataGridView_obj.Columns[3].HeaderText = "Giới Tính";
-            dataGridView_obj.Columns[4].HeaderText = "Email";
-            dataGridView_obj.Columns[5].HeaderText = "Số Điện Thoại";
-            dataGridView_obj.Columns[6].HeaderText = "Địa Chỉ";
+            dataGridView_obj.Columns[0].HeaderText = "MSGV";
+            loadGiaoVien();
+        }
+        private void loadSinhVien()
+        {
+            dataGridView_obj.Rows.Clear();
+            foreach (SinhVien item in service.GetSinhViens())
+            {
+                dataGridView_obj.Rows.Add(item.MSSV,item.HoTen,item.Email,item.SoDienThoai,item.DiaChi,item.NgaySinh,item.TrangThaiSV);
+            }
+        }
+        private void loadGiaoVien()
+        {
+            dataGridView_obj.Rows.Clear();
+            foreach (GiaoVien item in service.GetGiaoViens())
+            {
+                dataGridView_obj.Rows.Add(item.MSGV, item.HoTen, item.Email, item.SoDienThoai, item.DiaChi, item.NgaySinh, item.TrangThaiGV);
+            }
+        }
 
-            //foreach (var item in svS.GetGiaoVien) // get tat ca sv
-            //{
+        private void dataGridView_obj_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Kiểm tra nếu hàng được chọn là hợp lệ
+            {
+                DataGridViewRow row = dataGridView_obj.Rows[e.RowIndex];
 
-            //}
+                txtMa.Text = row.Cells[0].Value?.ToString();
+                txt_Ten.Text = row.Cells[1].Value?.ToString();
+                txt_Email.Text = row.Cells[2].Value?.ToString();
+                txt_SoDienThoai.Text = row.Cells[3].Value?.ToString();
+                txt_DiaChi.Text = row.Cells[4].Value?.ToString();
+                if (DateTime.TryParse(row.Cells[5].Value.ToString(), out DateTime ngayThucHien))
+                {
+                    dtp_NgaySinh.Format = DateTimePickerFormat.Short;
+                    dtp_NgaySinh.Value = ngayThucHien;
+                }
+               
+                txt_TrangThai.Text = row.Cells[6].Value?.ToString();
+                
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if ((db.UserAccount.FirstOrDefault(p => p.MSGV == txtMa.Text || p.MSSV == txtMa.Text)) == null)
+            {
+                if (txtMa.Text.Contains("GV"))
+                {
+                    service.capTaiKhoan(txtMa.Text, "Teacher");
+                    MessageBox.Show("Cap thanh cong");
+                }
+                else
+                {
+                    service.capTaiKhoan(txtMa.Text, "Student");
+                    MessageBox.Show("Cap thanh cong");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tai khoan da ton tai");
+            }
+           
+        }
+
+        private void btn_Them_Click_1(object sender, EventArgs e)
+        {
+
+            // Kiểm tra email
+            Regex emailRegex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            if (!emailRegex.IsMatch(txt_Email.Text))
+            {
+                MessageBox.Show("Email không hợp lệ! Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_Email.Focus();
+                return;
+            }
+
+            // Kiểm tra số điện thoại
+            Regex phoneRegex = new Regex(@"^(\+84|0)\d{9,10}$");
+            if (!phoneRegex.IsMatch(txt_SoDienThoai .Text))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ! Vui lòng nhập lại số điện thoại có 9-10 chữ số, bắt đầu bằng +84 hoặc 0.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_SoDienThoai.Focus();
+                return;
+            }
+
+            // Kiểm tra mã số 
+            Regex mssvRegex = new Regex(@"^(SV|GV)\d{3}$");
+            string inputText = txtMa.Text.Trim();
+            if (!mssvRegex.IsMatch(inputText))
+            {
+                MessageBox.Show("Mã số sinh viên không hợp lệ! Mã phải bắt đầu bằng 'SV or GV' và theo sau là 3 chữ số.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMa.Focus();
+                return;
+            }
+
+
+
+            // Kiểm tra họ tên
+            Regex nameRegex = new Regex(@"^[\p{L} ]+$");
+            if (!nameRegex.IsMatch(txt_Ten.Text))
+            {
+                MessageBox.Show("Họ tên không hợp lệ! Vui lòng chỉ nhập chữ cái và khoảng trắng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_Ten.Focus();
+                return;
+            }
+
+            // Kiểm tra địa chỉ (đơn giản là không được để trống)
+            if (string.IsNullOrWhiteSpace(txt_DiaChi.Text))
+            {
+                MessageBox.Show("Địa chỉ không được để trống! Vui lòng nhập địa chỉ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_DiaChi.Focus();
+                return;
+            }
+            if (txtMa.Text.Contains("GV"))
+            {
+                bool x= service.capnhatGV(txtMa.Text,txt_Ten.Text, txt_Email.Text, txt_SoDienThoai.Text,  txt_DiaChi.Text, dtp_NgaySinh.Value,true);
+                if (x == true)
+                {
+                    MessageBox.Show("cap nhat thanh cong");
+                    loadGiaoVien();
+                }
+                else
+                {
+                    MessageBox.Show("cap nhat ko thanh cong");
+                }
+            }
+            else
+            {
+                bool x = service.capnhatSV(txtMa.Text, txt_Ten.Text, txt_Email.Text, txt_SoDienThoai.Text, txt_DiaChi.Text, dtp_NgaySinh.Value, true);
+                if (x == true)
+                {
+                    MessageBox.Show("cap nhat thanh cong");
+                    loadGiaoVien();
+                }
+                else
+                {
+                    MessageBox.Show("cap nhat ko thanh cong");
+                }
+            }
+            
+        }
+
+        private void btn_SuaThongTin_Click_1(object sender, EventArgs e)
+        {
+            // Kiểm tra email
+            Regex emailRegex = new Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
+            if (!emailRegex.IsMatch(txt_Email.Text))
+            {
+                MessageBox.Show("Email không hợp lệ! Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_Email.Focus();
+                return;
+            }
+
+            // Kiểm tra số điện thoại
+            Regex phoneRegex = new Regex(@"^(\+84|0)\d{9,10}$");
+            if (!phoneRegex.IsMatch(txt_SoDienThoai.Text))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ! Vui lòng nhập lại số điện thoại có 9-10 chữ số, bắt đầu bằng +84 hoặc 0.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_SoDienThoai.Focus();
+                return;
+            }
+
+            // Kiểm tra mã số 
+            Regex mssvRegex = new Regex(@"^(SV|GV)\d{3}$");
+            if (!mssvRegex.IsMatch(txtMa.Text))
+            {
+                MessageBox.Show("Mã số sinh viên không hợp lệ! Mã phải bắt đầu bằng 'SV or GV' và theo sau là 3 chữ số.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMa.Focus();
+                return;
+            }
+
+
+
+            // Kiểm tra họ tên
+            Regex nameRegex = new Regex(@"^[\p{L} ]+$");
+            if (!nameRegex.IsMatch(txt_Ten.Text))
+            {
+                MessageBox.Show("Họ tên không hợp lệ! Vui lòng chỉ nhập chữ cái và khoảng trắng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_Ten.Focus();
+                return;
+            }
+
+            // Kiểm tra địa chỉ (đơn giản là không được để trống)
+            if (string.IsNullOrWhiteSpace(txt_DiaChi.Text))
+            {
+                MessageBox.Show("Địa chỉ không được để trống! Vui lòng nhập địa chỉ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_DiaChi.Focus();
+                return;
+            }
+            if (txtMa.Text.Contains("GV"))
+            {
+                bool x = service.capnhatGV(txtMa.Text, txt_Ten.Text, txt_Email.Text, txt_SoDienThoai.Text, txt_DiaChi.Text, dtp_NgaySinh.Value, true);
+                if (x == true)
+                {
+                    MessageBox.Show("cap nhat thanh cong");
+                    loadGiaoVien();
+                }
+                else
+                {
+                    MessageBox.Show("cap nhat ko thanh cong");
+                }
+            }
+            else
+            {
+                bool x = service.capnhatSV(txtMa.Text, txt_Ten.Text, txt_Email.Text, txt_SoDienThoai.Text, txt_DiaChi.Text, dtp_NgaySinh.Value, true);
+                if (x == true)
+                {
+                    MessageBox.Show("cap nhat thanh cong");
+                    loadGiaoVien();
+                }
+                else
+                {
+                    MessageBox.Show("cap nhat ko thanh cong");
+                }
+            }
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -77,18 +78,63 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            // Kiểm tra tiêu đề
+            Regex titleRegex = new Regex(@"^[\w\s]{5,100}$");
+            if (!titleRegex.IsMatch(txt_TieuDe.Text))
+            {
+                MessageBox.Show("Tiêu đề không hợp lệ! Vui lòng nhập từ 5 đến 100 ký tự, chỉ bao gồm chữ cái, số và khoảng trắng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_TieuDe.Focus();
+                return;
+            }
+
+            // Kiểm tra mô tả
+            Regex descriptionRegex = new Regex(@".{10,500}");
+            if (!descriptionRegex.IsMatch(txt_rtb_MoTa.Text))
+            {
+                MessageBox.Show("Mô tả không hợp lệ! Vui lòng nhập từ 10 đến 500 ký tự.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_rtb_MoTa.Focus();
+                return;
+            }
+
+            // Kiểm tra địa điểm
+            Regex locationRegex = new Regex(@"^[\w\s]{5,100}$");
+            if (!locationRegex.IsMatch(txt_DiaDiem.Text))
+            {
+                MessageBox.Show("Địa điểm không hợp lệ! Vui lòng nhập từ 5 đến 100 ký tự, chỉ bao gồm chữ cái, số và khoảng trắng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_DiaDiem.Focus();
+                return;
+            }
+
+            // Kiểm tra mã lớp hoạt động
+            bool kt = gvS.KtLopThuocGiaoVien(txt_MaLopHoatDong.Text);
+            if (!kt)
+            {
+                MessageBox.Show("Vui lòng chỉ chọn các lớp bạn dạy");
+                txt_MaLopHoatDong.Focus();
+                return;
+            }
+            DateTime selectedDate = dtp_NgayThucHien.Value;
+            if (selectedDate <= DateTime.Today)
+            {
+                MessageBox.Show("Ngày thực hiện không được là ngày trong quá khứ và ngày hôm nay ! Vui lòng chọn một ngày hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_NgayThucHien.Focus();
+                return;
+            }
+
+            // Tạo hoạt động
             DateTime selectedTime = t_ThoiGian.Value;
             TimeSpan timeSpan = selectedTime.TimeOfDay;
-            x = gvS.CreateHoatDong(txt_TieuDe.Text, txt_rtb_MoTa.Text, dtp_NgayThucHien.Value, timeSpan, txt_DiaDiem.Text, txt_MaLopHoatDong.Text);
+            bool x = gvS.CreateHoatDong(txt_TieuDe.Text, txt_rtb_MoTa.Text, dtp_NgayThucHien.Value, timeSpan, txt_DiaDiem.Text, txt_MaLopHoatDong.Text);
             if (x)
             {
-                MessageBox.Show("Thêm Thành Công","Thông Báo");
+                MessageBox.Show("Thêm Thành Công", "Thông Báo");
                 refresh();
             }
             else
             {
                 MessageBox.Show("Thêm Thất Bại", "Thông Báo");
             }
+
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -118,7 +164,64 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            
+            // Kiểm tra tiêu đề
+            Regex titleRegex = new Regex(@"^[\w\s]{5,100}$");
+            if (!titleRegex.IsMatch(txt_TieuDe.Text))
+            {
+                MessageBox.Show("Tiêu đề không hợp lệ! Vui lòng nhập từ 5 đến 100 ký tự, chỉ bao gồm chữ cái, số và khoảng trắng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_TieuDe.Focus();
+                return;
+            }
+
+            // Kiểm tra mô tả
+            Regex descriptionRegex = new Regex(@".{10,500}");
+            if (!descriptionRegex.IsMatch(txt_rtb_MoTa.Text))
+            {
+                MessageBox.Show("Mô tả không hợp lệ! Vui lòng nhập từ 10 đến 500 ký tự.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_rtb_MoTa.Focus();
+                return;
+            }
+
+            // Kiểm tra địa điểm
+            Regex locationRegex = new Regex(@"^[\w\s]{5,100}$");
+            if (!locationRegex.IsMatch(txt_DiaDiem.Text))
+            {
+                MessageBox.Show("Địa điểm không hợp lệ! Vui lòng nhập từ 5 đến 100 ký tự, chỉ bao gồm chữ cái, số và khoảng trắng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_DiaDiem.Focus();
+                return;
+            }
+
+            // Kiểm tra mã lớp hoạt động
+            bool kt = gvS.KtLopThuocGiaoVien(txt_MaLopHoatDong.Text);
+            if (!kt)
+            {
+                MessageBox.Show("Vui lòng chỉ chọn các lớp bạn dạy");
+                txt_MaLopHoatDong.Focus();
+                return;
+            }
+            DateTime selectedDate = dtp_NgayThucHien.Value;
+            if (selectedDate <= DateTime.Today)
+            {
+                MessageBox.Show("Ngày thực hiện không được là ngày trong quá khứ và ngày hôm nay ! Vui lòng chọn một ngày hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_NgayThucHien.Focus();
+                return;
+            }
+
+            // Tạo hoạt động
+            DateTime selectedTime = t_ThoiGian.Value;
+            TimeSpan timeSpan = selectedTime.TimeOfDay;
+            int ma = int.Parse(txt_MaHoatDong.Text);
+            bool x = gvS.UpdateHoatDong(ma,txt_TieuDe.Text, txt_rtb_MoTa.Text, dtp_NgayThucHien.Value, timeSpan, txt_DiaDiem.Text, txt_MaLopHoatDong.Text);
+            if (x)
+            {
+                MessageBox.Show("Cap nhat Thành Công", "Thông Báo");
+                refresh();
+            }
+            else
+            {
+                MessageBox.Show("Cap nhat Thất Bại", "Thông Báo");
+            }
+
         }
         private void CamSua(bool choPhep)
         {

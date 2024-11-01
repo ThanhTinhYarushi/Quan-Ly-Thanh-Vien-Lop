@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyThanhVien.GUI.Students.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,7 +73,7 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
             hideForm();
             foreach (Form f in this.MdiChildren)
             {
-                if (f.Name == "frmNhanVien")
+                if (f.Name == "frmQuanLyHoatDongLopHoc")
                 {
                     f.Activate();
                     f.BringToFront();
@@ -175,6 +176,66 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            // Hiển thị MessageBox để xác nhận đăng xuất
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn đăng xuất không?",
+                "Xác Nhận Đăng Xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Kiểm tra kết quả từ MessageBox
+            if (result == DialogResult.Yes)
+            {
+                frmLogIn loginForm = new frmLogIn(); // Tạo một thể hiện mới của FormLogin
+                loginForm.Show(); // Hiển thị lại form đăng nhập
+                this.Close(); // Đóng form cha
+            }
+            // Nếu người dùng chọn No, không làm gì cả
+        }
+        public void xemBangDiem()
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmNhapVaQuanLyDiem")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmNhapVaQuanLyDiem frm = new frmNhapVaQuanLyDiem();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+        public void xemThamgia()
+        {
+            hideForm();
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmXemDanhSachThamGia")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmXemDanhSachThamGia frm = new frmXemDanhSachThamGia();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
@@ -16,6 +17,7 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
     public partial class frmQuanLyLopHoc : Form
     {
         private readonly AdminService service = new AdminService();
+        QLTV2Entities db = new QLTV2Entities() ;
         public frmQuanLyLopHoc()
         {
             InitializeComponent();
@@ -56,20 +58,119 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
         private void button1_Click(object sender, EventArgs e)
         {
 
-            bool x = service.CreateAndUpdateLop(txt_MaLop.Text,txt_TenLop.Text,txtMSGV.Text,txtTiet.Text,txtPhong.Text,true);
-            if (x == true)
+            // Biểu thức regex chỉ cho phép chữ cái, chữ số và khoảng trắng
+            Regex regex = new Regex(@"^[\p{L}\d\s]+$");
+
+            // Kiểm tra mã lớp
+            if (string.IsNullOrWhiteSpace(txt_MaLop.Text) || !regex.IsMatch(txt_MaLop.Text))
             {
-                MessageBox.Show("them lop thanh cong");
+                MessageBox.Show("Mã lớp không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_MaLop.Focus();
+                return;
+            }
+
+            // Kiểm tra tên lớp
+            if (string.IsNullOrWhiteSpace(txt_TenLop.Text) || !regex.IsMatch(txt_TenLop.Text))
+            {
+                MessageBox.Show("Tên lớp không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_TenLop.Focus();
+                return;
+            }
+
+            // Kiểm tra MSGV
+            if (string.IsNullOrWhiteSpace(txtMSGV.Text) || !regex.IsMatch(txtMSGV.Text))
+            {
+                MessageBox.Show("MSGV không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMSGV.Focus();
+                return;
+            }
+            if (db.GiaoVien.FirstOrDefault(p=>p.MSGV==txtMSGV.Text)==null)
+            {
+                MessageBox.Show("MSGV ko ton tai", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMSGV.Focus();
+                return;
+            }
+
+            // Kiểm tra số tiết
+            if (string.IsNullOrWhiteSpace(txtTiet.Text))
+            {
+                MessageBox.Show("Tiet không được để trống! Vui lòng nhập tiet.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTiet.Focus();
+                return;
+            }
+
+            // Kiểm tra phòng học
+            if (string.IsNullOrWhiteSpace(txtPhong.Text) || !regex.IsMatch(txtPhong.Text))
+            {
+                MessageBox.Show("Phòng học không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPhong.Focus();
+                return;
+            }
+
+            // Gọi hàm sau khi kiểm tra tất cả các trường hợp hợp lệ
+            bool x = service.CreateAndUpdateLop(txt_MaLop.Text, txt_TenLop.Text, txtMSGV.Text, txtTiet.Text, txtPhong.Text, true);
+            if (x)
+            {
+                MessageBox.Show("Thêm lớp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 loadLop();
             }
             else
             {
-                MessageBox.Show("that bai");
+                MessageBox.Show("Thêm lớp thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Biểu thức regex chỉ cho phép chữ cái, chữ số và khoảng trắng
+            Regex regex = new Regex(@"^[\p{L}\d\s]+$");
+
+            // Kiểm tra mã lớp
+            if (string.IsNullOrWhiteSpace(txt_MaLop.Text) || !regex.IsMatch(txt_MaLop.Text))
+            {
+                MessageBox.Show("Mã lớp không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_MaLop.Focus();
+                return;
+            }
+
+            // Kiểm tra tên lớp
+            if (string.IsNullOrWhiteSpace(txt_TenLop.Text) || !regex.IsMatch(txt_TenLop.Text))
+            {
+                MessageBox.Show("Tên lớp không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_TenLop.Focus();
+                return;
+            }
+
+            // Kiểm tra MSGV
+            if (string.IsNullOrWhiteSpace(txtMSGV.Text) || !regex.IsMatch(txtMSGV.Text))
+            {
+                MessageBox.Show("MSGV không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMSGV.Focus();
+                return;
+            }
+            if (db.GiaoVien.FirstOrDefault(p => p.MSGV == txtMSGV.Text) == null)
+            {
+                MessageBox.Show("MSGV ko ton tai", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMSGV.Focus();
+                return;
+            }
+
+            // Kiểm tra số tiết
+            if (string.IsNullOrWhiteSpace(txtTiet.Text))
+            {
+                MessageBox.Show("Tiet không được để trống! Vui lòng nhập tiet.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTiet.Focus();
+                return;
+            }
+
+            // Kiểm tra phòng học
+            if (string.IsNullOrWhiteSpace(txtPhong.Text) || !regex.IsMatch(txtPhong.Text))
+            {
+                MessageBox.Show("Phòng học không hợp lệ! Vui lòng nhập không để trống và không chứa ký tự đặc biệt.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPhong.Focus();
+                return;
+            }
             bool x = service.CreateAndUpdateLop(txt_MaLop.Text, txt_TenLop.Text, txtMSGV.Text, txtTiet.Text, txtPhong.Text,bool.Parse(txtTrangThai.Text));
             if (x == true)
             {

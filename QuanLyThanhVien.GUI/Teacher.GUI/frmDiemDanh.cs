@@ -92,6 +92,24 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         {
             bool flag =true;
             string flagname ="";
+            DateTime createdDate = dtp_NgayDiemDanh.Value;
+            if (createdDate > DateTime.Today)
+            {
+                MessageBox.Show("Ngày tạo không được là ngày trong tương lai ! Vui lòng chọn một ngày hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dtp_NgayDiemDanh.Focus();
+                return;
+            }
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.IsNewRow)
+                    continue;
+                string trangthai = row.Cells[3].Value.ToString();
+                if (trangthai!="X"||trangthai!="V"||trangthai!="T")
+                {
+                    MessageBox.Show("Vui long chỉ chọn 3 giá trị X,V,T");
+                    return;
+                }
+            }
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {   
                 if (row.IsNewRow)

@@ -1,5 +1,6 @@
 ﻿using QuanLyThanhVien.BUS;
 using QuanLyThanhVien.DAL.Entities;
+using QuanLyThanhVien.GUI.Students.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,13 +23,13 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
 
         private void btn_XemDanhSachThamGia_Click(object sender, EventArgs e)
         {
-            frmXemDanhSachThamGia frm = new frmXemDanhSachThamGia();
-            frm.ShowDialog();
+            frmGiangVien frm = (frmGiangVien)this.ParentForm;
+            frm.xemThamgia();
         }
         private void btn_XemBangDiem_Click(object sender, EventArgs e)
         {
-            frmNhapVaQuanLyDiem frm = new frmNhapVaQuanLyDiem();
-            frm.ShowDialog();
+            frmGiangVien frm = (frmGiangVien)this.ParentForm;
+            frm.xemBangDiem();
         }
 
         private void frmQuanLyLopHoc_Load(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,14 @@ namespace QuanLyThanhVien.BUS.ObjectService
     public class AdminService
     {
         private readonly QLTV2Entities db = new QLTV2Entities();
-
+        public List<GiaoVien> GetGiaoViens()
+        {
+            return db.GiaoVien.ToList();
+        }
+        public List<SinhVien> GetSinhViens()
+        {
+            return db.SinhVien.ToList();
+        }
         public List<HoatDong> GetHoatDongs()
         {
             return db.HoatDong.ToList();
@@ -104,6 +112,79 @@ namespace QuanLyThanhVien.BUS.ObjectService
         {
             return db.ThongBao.Where(p=>p.ClassID == classid).ToList(); 
         }
-        
+        public bool capnhatSV(string mssv,string ten,string email,string sdt,string diachi,DateTime ngaySinh,bool trangThai)
+        {
+            SinhVien sv = new SinhVien();
+            sv.MSSV = mssv;
+            sv.HoTen= ten;
+            sv.Email = email;
+            sv.SoDienThoai = sdt;
+            sv.DiaChi= diachi;
+            sv.NgaySinh= ngaySinh;
+            sv.TrangThaiSV= trangThai;
+            db.SinhVien.AddOrUpdate(sv);
+            db.SaveChanges();
+            return true;
+        }
+        public bool capnhatGV(string msgv, string ten, string email, string sdt, string diachi, DateTime ngaySinh, bool trangThai)
+        {
+            GiaoVien sv = new GiaoVien();
+            sv.MSGV = msgv;
+            sv.HoTen = ten;
+            sv.Email = email;
+            sv.SoDienThoai = sdt;
+            sv.DiaChi = diachi;
+            sv.NgaySinh = ngaySinh;
+            sv.TrangThaiGV = trangThai;
+            db.GiaoVien.AddOrUpdate(sv);
+            db.SaveChanges();
+            return true;
+        }
+        public bool capTaiKhoan(string ma,string role)
+        {
+            UserAccount userAccount = new UserAccount();
+            userAccount.Username = ma;
+            userAccount.Password = "password123";
+            userAccount.Role  = role;
+            if (role == "Student")
+            {
+                userAccount.MSSV = ma;
+            }
+            else
+            {
+                userAccount.MSGV = ma;
+            }
+            db.UserAccount.Add(userAccount);
+            db.SaveChanges();
+            return true;
+        }
+        public void themThemThongBao(string tieude,string noidung,DateTime ngayTao,string classID)
+        {
+            ThongBao  thongBao = new ThongBao();
+            thongBao.NgayTao = ngayTao;
+            thongBao.TieuDe = tieude;
+            thongBao.NoiDung = noidung;
+            thongBao.ClassID = classID;
+            db.ThongBao.Add(thongBao);
+            db.SaveChanges ();
+        }
+        public void updateThongbao(int ma,string tieude, string noidung, DateTime ngayTao, string classID)
+        {
+            ThongBao thongBao = new ThongBao();
+            thongBao.NgayTao = ngayTao;
+            thongBao.TieuDe = tieude;
+            thongBao.NoiDung = noidung;
+            thongBao.ClassID = classID;
+            thongBao.ThongBaoID = ma;
+            db.ThongBao.AddOrUpdate(thongBao);
+            db.SaveChanges();
+        }
+        public void XoaThongBao(int thongbaoID)
+        {
+           ThongBao tb = db.ThongBao.FirstOrDefault(p=>p.ThongBaoID == thongbaoID);
+            db.ThongBao.Remove(tb);
+            db.SaveChanges();
+        }
+
     }
 }

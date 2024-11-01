@@ -153,5 +153,24 @@ namespace QuanLyThanhVien.GUI.Admin.GUI
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            // Hiển thị MessageBox để xác nhận đăng xuất
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn đăng xuất không?",
+                "Xác Nhận Đăng Xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Kiểm tra kết quả từ MessageBox
+            if (result == DialogResult.Yes)
+            {
+                frmLogIn loginForm = new frmLogIn(); // Tạo một thể hiện mới của FormLogin
+                loginForm.Show(); // Hiển thị lại form đăng nhập
+                this.Close(); // Đóng form cha
+            }
+            // Nếu người dùng chọn No, không làm gì cả
+        }
     }
 }

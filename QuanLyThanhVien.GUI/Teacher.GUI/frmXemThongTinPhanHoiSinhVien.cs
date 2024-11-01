@@ -84,7 +84,5 @@ namespace QuanLyThanhVien.GUI.Teacher.GUI
         {
             loadHoatDong();
         }
-
-        
     }
 }

@@ -82,16 +82,23 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
         private void btnGui_Click(object sender, EventArgs e)
         {
-            
-            var a =service.guiPhanHoi(SinhVienInstance.sv.MSSV, txtMaHD.Text, txtNoiDung.Text, dateTimePicker1.Value);
-            if (a==true)
+            if (txtNoiDung.Text!="")
             {
-                MessageBox.Show("Gui phan hoi thanh cong");
+                var a = service.guiPhanHoi(SinhVienInstance.sv.MSSV, txtMaHD.Text, txtNoiDung.Text, dateTimePicker1.Value);
+                if (a == true)
+                {
+                    MessageBox.Show("Gui phan hoi thanh cong");
+                }
+                else
+                {
+                    MessageBox.Show("Gui phan hoi that bai");
+                }
             }
             else
             {
-                MessageBox.Show("Gui phan hoi that bai");
+                MessageBox.Show("vui long them noi dung");
             }
+            
         }
 
         private void btnThuHoi_Click(object sender, EventArgs e)

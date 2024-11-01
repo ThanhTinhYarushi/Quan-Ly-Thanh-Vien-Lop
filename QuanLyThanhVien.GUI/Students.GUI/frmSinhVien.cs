@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyThanhVien.DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QuanLyThanhVien.GUI.Students.GUI
 {
@@ -15,6 +17,8 @@ namespace QuanLyThanhVien.GUI.Students.GUI
         public frmSinhVien()
         {
             InitializeComponent();
+            loadthongBaodefault();
+           
         }
         private void hideForm()
         {
@@ -40,7 +44,10 @@ namespace QuanLyThanhVien.GUI.Students.GUI
 
             frmThongTinCaNhanSinhVien frmNV = new frmThongTinCaNhanSinhVien();
             frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
             frmNV.WindowState = FormWindowState.Maximized;
+          
             frmNV.Show();
         }
 
@@ -52,6 +59,216 @@ namespace QuanLyThanhVien.GUI.Students.GUI
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void thamGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmHoatDong")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmHoatDong frmNV = new frmHoatDong();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmThongTinCaNhanSinhVien")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmThongTinCaNhanSinhVien frmNV = new frmThongTinCaNhanSinhVien();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.ClientSize.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.ClientSize.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void xemĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmDiem")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmDiem frmNV = new frmDiem();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+            
+        }
+
+        private void thôngTinLớpHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmLopSinhVien")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmLopSinhVien frmNV = new frmLopSinhVien();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void tsmThongBao_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "ThongBao")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            ThongBao frmNV = new ThongBao();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void tsmThongTin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmPhanHoi_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmPhanHoi")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmPhanHoi frmNV = new frmPhanHoi();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+        public void loadThongBao()
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "ThongBao")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            ThongBao frmNV = new ThongBao();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+        public void loadhoatdong()
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if (f.Name == "frmHoatDong")
+                {
+                    f.Activate();
+                    f.BringToFront();
+                    f.WindowState = FormWindowState.Maximized;
+                    f.Show();
+                    return;
+                }
+            }
+
+            frmHoatDong frmNV = new frmHoatDong();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+        private void loadthongBaodefault()
+        {
+           
+
+            ThongBao frmNV = new ThongBao();
+            frmNV.MdiParent = this;
+            frmNV.Left = (this.ClientSize.Width - frmNV.Width) / 2;
+            frmNV.Top = (this.ClientSize.Height - frmNV.Height) / 2;
+            frmNV.WindowState = FormWindowState.Maximized;
+            frmNV.Show();
+        }
+
+        private void toolStripButton1_Click_2(object sender, EventArgs e)
+        {
+            // Hiển thị MessageBox để xác nhận đăng xuất
+            DialogResult result = MessageBox.Show(
+                "Bạn có chắc chắn muốn đăng xuất không?",
+                "Xác Nhận Đăng Xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            // Kiểm tra kết quả từ MessageBox
+            if (result == DialogResult.Yes)
+            {
+                frmLogIn loginForm = new frmLogIn(); // Tạo một thể hiện mới của FormLogin
+                loginForm.Show(); // Hiển thị lại form đăng nhập
+                this.Close(); // Đóng form cha
+            }
+            // Nếu người dùng chọn No, không làm gì cả
         }
     }
 }

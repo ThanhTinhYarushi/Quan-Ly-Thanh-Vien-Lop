@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +36,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +56,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.GUI\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyHoatDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyHoatDong.Designer.cs">
+      <DependentUpon>frmQuanLyHoatDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyPhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyPhanHoi.Designer.cs">
+      <DependentUpon>frmQuanLyPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmQuanLyThongBao.Designer.cs">
+      <DependentUpon>frmQuanLyThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemDiemDanhVaViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemDiemDanhVaViPham.Designer.cs">
+      <DependentUpon>frmXemDiemDanhVaViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.GUI\frmXemThongTinCaNhan.Designer.cs">
+      <DependentUpon>frmXemThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.GUI\frmDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,29 +128,35 @@
     <Compile Include="Students.GUI\frmSinhVien.Designer.cs">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Students.GUI\frmThamGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Students.GUI\frmThamGia.Designer.cs">
-      <DependentUpon>frmThamGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Students.GUI\frmThongBao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Students.GUI\frmThongBao.Designer.cs">
-      <DependentUpon>frmThongBao.cs</DependentUpon>
-    </Compile>
     <Compile Include="Students.GUI\frmThongTinCaNhanSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Students.GUI\frmThongTinCaNhanSinhVien.Designer.cs">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Students.GUI\frmXemViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.GUI\frmXemViPham.Designer.cs">
+      <DependentUpon>frmXemViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students.GUI\ThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students.GUI\ThongBao.Designer.cs">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.GUI\ThongTinLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Students.GUI\ThongTinLopHoc.Designer.cs">
       <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System.GUI\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System.GUI\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="System.GUI\frmLogIn.cs">
       <SubType>Form</SubType>
@@ -114,6 +172,81 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teacher.GUI\frmDiemDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmDiemDanh.Designer.cs">
+      <DependentUpon>frmDiemDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmGiangVien.Designer.cs">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmGuiThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmGuiThongBao.Designer.cs">
+      <DependentUpon>frmGuiThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmNhapVaQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmNhapVaQuanLyDiem.Designer.cs">
+      <DependentUpon>frmNhapVaQuanLyDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLyHoatDongLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmQuanLyLopHoc.Designer.cs">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmThongTinCaNhanGiangVien.Designer.cs">
+      <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmXemDanhSachThamGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmXemDanhSachThamGia.Designer.cs">
+      <DependentUpon>frmXemDanhSachThamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.Designer.cs">
+      <DependentUpon>frmXemThongTinPhanHoiSinhVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.GUI\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyHoatDong.resx">
+      <DependentUpon>frmQuanLyHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyLopHoc.resx">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyPhanHoi.resx">
+      <DependentUpon>frmQuanLyPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmQuanLyThongBao.resx">
+      <DependentUpon>frmQuanLyThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmXemDiemDanhVaViPham.resx">
+      <DependentUpon>frmXemDiemDanhVaViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.GUI\frmXemThongTinCaNhan.resx">
+      <DependentUpon>frmXemThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmDiem.resx">
       <DependentUpon>frmDiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,17 +262,20 @@
     <EmbeddedResource Include="Students.GUI\frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Students.GUI\frmThamGia.resx">
-      <DependentUpon>frmThamGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Students.GUI\frmThongBao.resx">
-      <DependentUpon>frmThongBao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\frmThongTinCaNhanSinhVien.resx">
       <DependentUpon>frmThongTinCaNhanSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Students.GUI\frmXemViPham.resx">
+      <DependentUpon>frmXemViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students.GUI\ThongBao.resx">
+      <DependentUpon>ThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.GUI\ThongTinLopHoc.resx">
       <DependentUpon>ThongTinLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System.GUI\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System.GUI\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
@@ -156,6 +292,35 @@
     <EmbeddedResource Include="System.GUI\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmDiemDanh.resx">
+      <DependentUpon>frmDiemDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmGiangVien.resx">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmGuiThongBao.resx">
+      <DependentUpon>frmGuiThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmNhapVaQuanLyDiem.resx">
+      <DependentUpon>frmNhapVaQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmQuanLyHoatDongLopHoc.resx">
+      <DependentUpon>frmQuanLyHoatDongLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmQuanLyLopHoc.resx">
+      <DependentUpon>frmQuanLyLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmThongTinCaNhanGiangVien.resx">
+      <DependentUpon>frmThongTinCaNhanGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmXemDanhSachThamGia.resx">
+      <DependentUpon>frmXemDanhSachThamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.GUI\frmXemThongTinPhanHoiSinhVien.resx">
+      <DependentUpon>frmXemThongTinPhanHoiSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,11 +332,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin.GUI\" />
-    <Folder Include="Teacher.GUI\" />
+    <ProjectReference Include="..\QuanLyThanhVien.BUS\QuanLyThanhVien.BUS.csproj">
+      <Project>{9f8aec69-b84f-426d-b216-9ed787ecec57}</Project>
+      <Name>QuanLyThanhVien.BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuanLyThanhVien.DAL\QuanLyThanhVien.DAL.csproj">
+      <Project>{ee9c67d0-7737-4a40-85b9-653582bef125}</Project>
+      <Name>QuanLyThanhVien.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
 </Project>

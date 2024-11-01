@@ -35,8 +35,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTim = new System.Windows.Forms.Button();
-            this.txt_Tim = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,30 +89,11 @@
             this.Column5.HeaderText = "Phòng";
             this.Column5.Name = "Column5";
             // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(803, 99);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
-            this.btnTim.TabIndex = 5;
-            this.btnTim.Text = "Tìm kiếm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            // 
-            // txt_Tim
-            // 
-            this.txt_Tim.Location = new System.Drawing.Point(657, 101);
-            this.txt_Tim.Name = "txt_Tim";
-            this.txt_Tim.Size = new System.Drawing.Size(100, 20);
-            this.txt_Tim.TabIndex = 6;
-            this.txt_Tim.TextChanged += new System.EventHandler(this.txt_Tim_TextChanged);
-            // 
             // ThongTinLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 509);
-            this.Controls.Add(this.txt_Tim);
-            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Name = "ThongTinLopHoc";
@@ -133,7 +112,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button btnTim;
-        private System.Windows.Forms.TextBox txt_Tim;
     }
 }
